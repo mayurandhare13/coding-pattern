@@ -63,3 +63,4 @@ if __name__ == "__main__":
     print(reorganize_string("Programming", 3))
     print(reorganize_string("aab", 2))
     print(reorganize_string("aappa", 3))
+    print(reorganize_string("aaadbbcc", 2))
