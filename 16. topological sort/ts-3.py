@@ -50,3 +50,4 @@ if __name__ == "__main__":
     print(find_order(3, [[0, 1], [1, 2]]))
     print(find_order(3, [[0, 1], [1, 2], [2, 0]]))
     print(find_order(6, [[2, 5], [0, 5], [0, 4], [1, 4], [3, 2], [1, 3]]))
+    print(find_order(3, [[0, 1],[1, 2],[2, 0]]))

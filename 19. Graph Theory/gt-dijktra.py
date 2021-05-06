@@ -1,3 +1,6 @@
+# O(E*log(V))
+# only works with non-negative edges
+
 class Edge:
     def __init__(self, f = None, t = -1, c = -1):
         self._from = f
@@ -6,12 +9,12 @@ class Edge:
 
 
 class Node:
-    def __init__(self, id, val):
+    def __init__(self, id, distance):
         self.id = id
-        self.val = val
+        self.distance = distance
     
     def __lt__(self, other):
-        return self.val < other.val
+        return self.distance < other.distance
 
 
 from heapq import *
@@ -36,7 +39,7 @@ class Dijkstra:
         while queue:
             node = heappop(queue)
             visited[node.id] = True
-            if self.dist[node.id] < node.val:
+            if self.dist[node.id] < node.distance:
                 continue
 
             edges = self.graph.get(node.id)
@@ -62,12 +65,12 @@ class Dijkstra:
         path = []
         if distance == math.inf:
             return path
-        
+
         at = end
         while at:
             path.append(at)
             at = self.prev[at]
-        
+
         path.reverse()
 
         return path
@@ -83,7 +86,7 @@ if __name__ == "__main__":
     }
 
     obj = Dijkstra(5, graph)
-    # distance = obj.dijkstra(0)
+    # distance = obj.dijkstra(0, 4)
     # print(distance)
 
     path = obj.reconstructPath(0, 4)

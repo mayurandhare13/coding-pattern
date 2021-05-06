@@ -33,7 +33,7 @@ def is_scheduling_possible(tasks, prerequisites):
         if val == 0:
             sources.append(key)
     
-    # 4. interate over sources
+    # 4. iterate over sources
     while sources:
         vertex = sources.popleft()
         sortedOrders.append(vertex)

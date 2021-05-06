@@ -1,4 +1,6 @@
 
+# O(V + E)
+
 class Edge(object):
 
     def __init__(self, f = None, t = -1, c = -1):
@@ -39,8 +41,7 @@ class TopologicalSort(object):
         dist = [None] * N
         dist[startVertex] = 0
 
-        for i in range(N):
-            nodeIndex = order[i]
+        for nodeIndex in order:
             if dist[nodeIndex] is not None:
                 edges = graph.get(nodeIndex, None)
                 if edges:

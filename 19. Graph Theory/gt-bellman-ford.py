@@ -1,3 +1,5 @@
+# O(V*E)
+
 class Edge:
     def __init__(self, f = None, t = -1, c = -1):
         self._from = f
