@@ -1,29 +1,20 @@
-def flatten_helper(d, flat_dict, path):
-    if not isinstance(d, dict):
-        flat_dict[path] = d
-        return 
+def firstMissingNumber(nums: list) -> int:
+    i, n = 0, len(nums)
 
-    for key, val in d.items():
-        new_key = f"{path}.{key}" if path else key
-        flatten_helper(val, flat_dict, new_key)
+    while i < n:
+        j = nums[i] - 1
+        if nums[i] > 0 and nums[i] <= n and nums[i] != nums[j]:
+            nums[i], nums[j] = nums[j], nums[i]
+        else:
+            i += 1
+    
+    for i in range(n):
+        if nums[i] != i + 1:
+            return i + 1
+    
+    return n + 1
 
-
-def flatten(d):
-    flat_dict = {}
-    flatten_helper(d, flat_dict, '')
-
-    return flat_dict
 
 if __name__ == '__main__':
-    d = {
-        "key": 3,
-        "foo": {
-            "a": 5,
-            "bar": {
-                "baz": 8
-            }
-        }
-    }
-
-    new_dict = flatten(d)
-    print(new_dict)
+    print(firstMissingNumber([3, 4, -1, 1]))
+    print(firstMissingNumber([3, 4, 1, 1]))

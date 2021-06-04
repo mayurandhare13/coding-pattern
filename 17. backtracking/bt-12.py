@@ -10,13 +10,13 @@ Explanation: Return true because "applepenapple" can be segmented as "apple pen 
 def word_break_helper(s, wordDict, start):
     if start == len(s):
         return True
-    
+
     for i in range(start+1, len(s)+1):
         word = s[start : i]
         if word in wordDict:
             if word_break_helper(s, wordDict, i):
                 return True
-    
+
     return False
 
 

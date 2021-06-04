@@ -20,7 +20,9 @@ def find_single_numbers(arr):
     rightmost_set_bit = 1
     while rightmost_set_bit & n1xn2 == 0:
         rightmost_set_bit = rightmost_set_bit << 1
-    
+
+    # rightmost_set_bit = n1xn2 & ~(n1xn2 - 1)
+
     num1, num2 = 0, 0
     for num in arr:
         if num & rightmost_set_bit != 0:    # bit is set

@@ -21,19 +21,19 @@ Given an integer N, write a program that returns, in order, the first N regular 
 
 ----
 
-3. ### Facebook
+274. ### Facebook
 
-Given a string consisting of parentheses, single digits, and positive and negative signs, convert the string into a mathematical expression to obtain the answer.  
+Given a string consisting of _parentheses, single digits, and positive and negative signs_, convert the string into a mathematical expression to obtain the answer.  
 
 Don't use eval or a similar built-in parser.
 
 For example, given `-1 + (2 + 3)`, you should return `4`.
 
-[calculator](dcp_003.py)
+[basic calculator](dcp_274.py)
 
 ----
 
-4. ### Stripe
+173. ### Stripe
 
 Write a function to flatten a nested dictionary. Namespace the keys with a period.
 
@@ -56,7 +56,7 @@ it should become:
     "foo.bar.baz": 8
 }
 ```
-[flatten dictionary](dcp_004.py)
+[flatten dictionary](dcp_173.py)
 
 ----
 5. ### Mozilla
@@ -462,5 +462,134 @@ You are given a list of `N` points `(x1, y1), (x2, y2), ..., (xN, yN)` represent
 Determine if a new point p lies inside this polygon. (If p is on the boundary of the polygon, you should return False).
 
 [Point in Polygon](dcp_236.py)
+
+----
+
+254. ### Yahoo
+
+Recall that a full binary tree is one in which each node is either a leaf node, or has two children. Given a binary tree, convert it to a full one by removing nodes with only one child.
+
+```
+
+         0
+      /     \
+    1         2
+  /            \
+3                 4
+  \             /   \
+    5          6     7
+```
+
+You should convert it to:
+```
+     0
+  /     \
+5         4
+        /   \
+       6     7
+```
+
+[Truncate Tree](dcp_254.py)
+
+----
+
+101. ### Alibaba
+
+Given an even number (greater than 2), return two prime numbers whose sum will be equal to the given number.
+
+A solution will always exist. See [Goldbach’s conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture).
+
+Example:
+```
+Input: 4
+Output: 2 + 2 = 4
+```
+If there are more than one solution possible, return the lexicographically smaller solution.
+
+[Prime Numbers](dcp_101.py)
+
+----
+
+221.   ### Zillow
+
+Let's define a `sevenish` number to be one which is either a power of `7`, or the sum of unique powers of `7`. The first few sevenish numbers are `1, 7, 8, 49, and so on`.  
+Create an algorithm to find the nth sevenish number.
+
+[Sevenish Number](dcp_221.py)
+
+----
+
+152. ### Triplebyte
+
+You are given `n` numbers as well as `n` probabilities that sum up to `1`. Write a function to generate one of the numbers with its corresponding probability.
+
+For example, given the numbers `[1, 2, 3, 4]` and probabilities `[0.1, 0.5, 0.2, 0.2]`, your function should return 1 10% of the time, 2 50% of the time, and 3 and 4 20% of the time.
+
+You can generate random numbers between 0 and 1 uniformly.
+
+[Arbitrary Probability](dcp_152.py)
+
+----
+
+212. ### Dropbox
+
+Spreadsheets often use this alphabetical encoding for its columns: `"A", "B", "C", ..., "AA", "AB", ..., "ZZ", "AAA", "AAB", ....`
+
+Given a column number, return its alphabetical column id. For example, given `1`, return `A`. Given `27`, return `AA`.
+
+[Column Number](dcp_212.py)
+
+----
+
+195. ### Google
+
+Let `A` be an `N by M` matrix in which every row and every column is sorted.
+
+Given `i1, j1, i2, and j2`, compute the number of elements of M _smaller_ than `M[i1, j1]` and _larger_ than `M[i2, j2]`.
+
+For example, given the following matrix:
+```
+[[1, 3, 7, 10, 15, 20],
+ [2, 6, 9, 14, 22, 25],
+ [3, 8, 10, 15, 25, 30],
+ [10, 11, 12, 23, 30, 35],
+ [20, 25, 30, 35, 40, 45]]
+```
+And `i1 = 1, j1 = 1, i2 = 3, j2 = 3`, return `14` as there are 14 numbers in the matrix smaller than 6 or greater than 23.
+
+[Count Numbers](dcp_195.py)
+
+----
+
+47. ### Facebook
+
+
+Given a array of numbers representing the stock prices of a company in  order, write a function that calculates the maximum profit you could have made from buying and selling that stock once. You must buy before you can sell it.
+
+For example, given `[9, 11, 8, 5, 7, 10]`, you should return `5`, since you could **buy** the stock at `5` dollars and **sell** it at `10` dollars.
+
+[Buy Sell Stock](dcp_047.py)
+
+----
+
+4. ### Stripe
+
+Given an array of integers, find the first missing positive integer in linear time and constant space. In other words, find the lowest positive integer that does not exist in the array. The array can contain duplicates and negative numbers as well.
+
+For example, the input `[3, 4, -1, 1]` should give `2`. The input `[1, 2, 0]` should give `3`.
+
+You can modify the input array in-place.
+
+[First missing positive number](dcp_004.py)
+
+----
+
+273. ### Apple
+
+A fixed point in an array is an element whose value is equal to its index. Given a sorted array of distinct elements, return a fixed point, if one exists. Otherwise, return False.
+
+For example, given `[-6, 0, 2, 40]`, you should return `2`. Given `[1, 5, 7, 8]`, you should return False.
+
+[Fixed Point](dcp_273.py)
 
 ----

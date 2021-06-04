@@ -1,5 +1,5 @@
 def calculate(s: str):
-    sum = 0
+    total = 0
     sign = 1
     stack = []
 
@@ -12,30 +12,32 @@ def calculate(s: str):
                 i += 1
             
             i -= 1
-            sum += sign * num
-        
-        elif s[i] == '+':
+            total += sign * num
+
+        if s[i] == '+':
             sign = 1
         
         elif s[i] == '-':
             sign = -1
         
         elif s[i] == '(':
-            stack.append(sum)
+            stack.append(total)
             stack.append(sign)
 
-            sign, sum = 1, 0
+            sign, total = 1, 0
 
         elif s[i] == ')':
             operand = stack.pop()
-            last_sum = stack.pop()
+            last_total = stack.pop()
 
-            sum = last_sum + operand * sum
+            total = last_total + operand * total
     
-    return sum
+    return total
 
 
 if __name__ == '__main__':
     s = "(1 + (4+5+2) -3 ) + (6+8)"
     res = calculate(s)
     print(res)
+
+    print(calculate("-1 + (2 + 3)"))
