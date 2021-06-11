@@ -17,6 +17,27 @@ def remove_duplicates(arr):
     return left
 
 
+def removeDuplicates(nums: list):
+    n = len(nums)
+    if n <= 1:
+        return n
+
+    # index to store next unique element
+    # we are replacing only last element of duplicates
+    j = 0
+    for i in range(0, n-1):
+        if nums[i] != nums[i+1]:
+            nums[j] = nums[i]
+            j += 1
+
+    nums[j] = nums[n-1]
+    j += 1
+
+    return j
+
+
 if __name__ == "__main__":
     print(remove_duplicates([2, 3, 3, 3, 6, 9, 9]))
+    print(removeDuplicates([2, 3, 3, 3, 6, 9, 9]))
     print(remove_duplicates([2, 2, 2, 11]))
+    print(removeDuplicates([2, 2, 2, 11]))

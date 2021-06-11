@@ -1,63 +1,67 @@
-class Stack:
-    def __init__(self):
-        self.stack = []
-        # we can also keep only max-value `index` (length of stack) in maxStack
-        # then when val from stack gets pop then only index 
-        # if len(self.stack) - 1 == self.max_stack[-1]:
-        #     self.max_stack.pop()
+class Node:
+    def __init__(self, val=None, left=None, right=None) -> None:
+        self.val = val
+        self.left = left
+        self.right = right
 
-        self.maxStack = []
 
-    def push(self, val):
-        self.stack.append(val)
-        
-        if not self.maxStack or val > self.maxStack[-1]:
-            self.maxStack.append(val)
+def univalHelper(node: Node, value: int):
+    if node is None:
+        return True
+    if node.val == value:
+        return univalHelper(node.left, value) and univalHelper(node.right, value)
     
-    def pop(self):
-        if not self.stack:
-            return None
-        
-        returnVal = self.stack.pop()
-        if returnVal == self.maxStack[-1]:
-            self.maxStack.pop()
-        
-        return returnVal
+    return False
 
 
-    def max(self):
-        if not self.maxStack:
-            return None
-        
-        return self.maxStack[-1]
+def isUnival(root: Node):
+    return univalHelper(root, root.val)
 
 
-    def popMax(self):
-        """
-        :rtype: int
-        """
-        maxElement = max(self.stack)
-        maxIndex = 0
-        for i in range(len(self.stack) - 1, -1, -1):
-            if maxElement == self.stack[i]:
-                maxIndex = i
-                break
-        return self.stack.pop(maxIndex)
+# O(n^2)
+def countUnivalTrees(root: Node):
+    if root is None:
+        return 0
+
+    lCount = countUnivalTrees(root.left)
+    rCount = countUnivalTrees(root.right)
+
+    return 1 + lCount + rCount if isUnival(root) else lCount + rCount
+
+
+def helper(root: Node) -> tuple:
+    if root is None:
+        return 0, True
+
+    lCount, isLeftUnival = helper(root.left)
+    rCount, isRightUnival = helper(root.right)
+    total = lCount + rCount
+
+    if isLeftUnival and isRightUnival:
+        if root.left is not None and root.val != root.left.val:
+            return total, False
+        if root.right is not None and root.val != root.right.val:
+            return total, False
+
+        return 1 + total, True
+
+    return total, False
+
+
+# O(n)
+def countUnivalTrees2(root: Node):
+    count, _ = helper(root)
+    return count
 
 
 if __name__ == '__main__':
-    s = Stack()
-    s.push(3)
-    s.push(10)
-    s.push(2)
-    s.push(5)
-    print (s.max()) # 10
-    print(s.pop())
+    r = Node(0)
+    r.left = Node(1)
+    r.right = Node(0)
+    r.right.left = Node(1)
+    r.right.left.left = Node(1)
+    r.right.left.right = Node(1)
+    r.right.right = Node(0)
 
-    print(s.pop())
-    print(s.pop())
-    print (s.max()) # 3
-    print(s.pop())
-
-    print(not s.max())
-
+    assert countUnivalTrees(r) == 5
+    assert countUnivalTrees2(r) == 5

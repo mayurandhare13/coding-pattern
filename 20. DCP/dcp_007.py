@@ -1,55 +1,52 @@
-from mmh3 import hash
-from bitarray import bitarray
+from functools import lru_cache
 
-class BloomFilter:
+@lru_cache(maxsize=None)
+def decodeWaysHelper(s: str, index: int) -> int:
+    if index == len(s):
+        return 1
 
-    def __init__(self, size, hashCount):
-        self.size = size
-        self.bitarray = bitarray(size)
-        self.bitarray.setall(0)
-        self.hashCount = hashCount
+    if s[index] == '0':
+        return 0
 
-    def add(self, item):
-        for i in range(self.hashCount):
-            index = hash(item, i) % self.size
-            self.bitarray[index] = 1
+    if index == len(s)-1:
+        return 1
+
+    ans = decodeWaysHelper(s, index+1)
+    if int(s[index : index + 2]) <= 26:
+        ans += decodeWaysHelper(s, index + 2)
+
+    return ans
+
+
+def decodeWays(s: str) -> int:
+    return decodeWaysHelper(s, 0)
+
+
+
+def decodeWaysIterative(s: str) -> int:
+    size = len(s)
+    dp = [0] * (size+1)
+    dp[0] = 1
+
+    dp[1] = 0 if s[0] == '0' else 1
+
+    for i in range(2, size+1):
+        if s[i-1] != '0':
+            dp[i] = dp[i - 1]
         
-        return self
+        twoDigit = int(s[i - 2 : i])
+        if twoDigit >= 10 and twoDigit <= 26:
+            dp[i] += dp[i - 2]
     
-    def check(self, item):
-        for i in range(self.hashCount):
-            index = hash(item, i) % self.size
-            if self.bitarray[index] == 0:
-                return False
-        
-        return True
+    return dp[size]
+
 
 
 if __name__ == '__main__':
-    bloom = BloomFilter(20, 10)
+    assert decodeWays('111') == 3
+    assert decodeWays('226') == 3
+    assert decodeWays('2326') == 4
 
-    animals = ['dog', 'cat', 'giraffe', 'fly', 'mosquito', 'horse', 'eagle',
-               'bird', 'bison', 'boar', 'butterfly', 'ant', 'anaconda', 'bear',
-               'chicken', 'dolphin', 'donkey', 'crow', 'crocodile']
-    
-    for animal in animals:
-        bloom.add(animal)
-
-    for animal in animals:
-        if bloom.check(animal):
-            print(f'{animal} is in bloom filter as expected')
-        else:
-            print(f'{animal} is not in bloom filter as expected')
-
-    # Membership existence for not inserted animals
-    # There could be false positives
-    other_animals = ['badger', 'cow', 'pig', 'sheep', 'bee', 'wolf', 'fox',
-                     'whale', 'shark', 'fish', 'turkey', 'duck', 'dove',
-                     'deer', 'elephant', 'frog', 'falcon', 'goat', 'gorilla',
-                     'hawk' ]
-
-    for other_animal in other_animals:
-        if bloom.check(other_animal):
-            print(f'{other_animal} is not in the bloom, but a false positive')
-        else:
-            print(f'{other_animal} is not in the bloom filter as expected')
+    assert decodeWaysIterative('111') == 3
+    assert decodeWaysIterative('226') == 3
+    assert decodeWaysIterative('2326') == 4

@@ -1,25 +1,18 @@
-def productExceptSelf(nums):
-    size = len(nums)
+def nonAdjacentSum(nums: list) -> int:
+    incl, excl = 0, 0
 
-    ans, L, R = [0] * size, [0] * size, [0] * size
+    for num in nums:
+        # excl = if we are excluding current element
+        # then max sum excluding current element could be previoud `incl | excl`
+        tmp = excl if excl > incl else incl
 
-    L[0] = 1
-    for i in range(1, size):
-        L[i] = L[i - 1] * nums[i - 1]
+        incl = excl + num
+        excl = tmp
     
-    R[size - 1] = 1
+    return max(incl, excl)
 
-    for i in range(size - 2, -1, -1):
-        R[i] = R[i + 1] * nums[i + 1]
-    
-    for i in range(size):
-        ans[i] = L[i] * R[i]
-
-    return ans
 
 if __name__ == '__main__':
-    ans = productExceptSelf([1, 2, 3, 4, 5])
-    print(ans)
-    
-    ans = productExceptSelf([3, 2, 1])
-    print(ans)
+    assert nonAdjacentSum([2, 4, 6, 8]) == 12
+    assert nonAdjacentSum([5, 1, 1, 5]) == 10
+    assert nonAdjacentSum([5, 5, 10, 100, 10, 5]) == 110

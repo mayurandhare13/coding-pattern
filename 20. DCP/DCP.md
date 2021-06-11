@@ -1,3 +1,12 @@
+Given K sorted lists. Return a new sorted merged list from K sorted lists, each with size N
+
+Input: `[[10, 15, 30], [12, 15, 20], [17, 20, 32]]`,
+Output: `[10, 12, 15, 15, 17, 20, 20, 30, 32]`
+
+[Merge lists](dcp_000.py)
+
+----
+
 1.  ### Amazon
 Given a string s and an integer k, break up the string into multiple lines such that each line has a length of k or less. You must break it up so that words don't break across lines. Each line has to have the maximum possible amount of words. If there's no way to break the text up, then return null.  
 
@@ -5,23 +14,95 @@ You can assume that there are no spaces at the ends of the string and that there
 
 Example, given the string `the quick brown fox jumps over the lazy dog` and `k = 10`, you should return: `["the quick", "brown fox", "jumps over", "the lazy", "dog"]`. No string in the list has a length of more than 10.
 
-[sentence break](dcp_001.py)
+[Sentence Break](dcp_001.py)
 
 ----
 
-2. ### Google
+2. ### Uber
 
-A regular number in mathematics is defined as one which evenly divides some power of 60. Equivalently, we can say that a regular number is one whose only prime divisors are `2, 3, and 5`.  
+Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
 
-These numbers have had many applications, from helping ancient Babylonians keep time to tuning instruments according to the diatonic scale.
+For example,
 
-Given an integer N, write a program that returns, in order, the first N regular numbers.
+input: `[1, 2, 3, 4, 5]`, output: `[120, 60, 40, 30, 24]`.
+input: `[3, 2, 1]`, output: `[2, 3, 6]`
 
-[regular number](dcp_002.py)
+[Product except self](dcp_002.py)
 
 ----
 
-274. ### Facebook
+4. ### Stripe
+
+Given an array of integers, find the first missing positive integer in linear time and constant space. In other words, find the lowest positive integer that does not exist in the array. The array can contain duplicates and negative numbers as well.
+
+For example, the input `[3, 4, -1, 1]` should give `2`. The input `[1, 2, 0]` should give `3`.
+
+You can modify the input array in-place.
+
+[First missing positive number](dcp_004.py)
+
+----
+
+5. ### Mozilla
+
+A bridge in a connected (undirected) graph is an edge that, if removed, causes the graph to become disconnected. Find all the bridges in a graph.
+
+[Bridges](dcp_005.py)
+
+----
+
+6. ### Google
+
+Implement an `LFU` (Least Frequently Used) cache. It should be able to be initialized with a cache size n, and contain the following methods:
+
+`set(key, value)`: sets key to value. If there are already n items in the cache and we are adding a new item, then it should also remove the least frequently used item. If there is a tie, then the least recently used key should be removed.
+
+`get(key)`: gets the value at key. If no such key exists, return null.
+Each operation should run in O(1) time.
+
+Similar [leetcode, Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/)
+
+[LFU](dcp_006.py)
+
+----
+
+7. ### Facebook
+Given the mapping `a = 1, b = 2, … z = 26`, and an encoded message, count the number of ways it can be decoded.  
+For example, the message ‘111’ would give 3, since it could be decoded as `‘aaa’, ‘ka’, and ‘ak’`.
+
+You can assume that the messages are decodable. For example, ‘001’ is not allowed.
+
+[Decode Ways](dcp_007.py)
+
+----
+
+8. ### Google
+A `unival tree` (which stands for “universal value”) is a tree where all nodes under it have the same value.  
+Given the root to a binary tree, count the number of unival subtrees.  
+For example, the following tree has `5` unival subtrees:  
+```
+   0
+  / \
+ 1   0
+    / \
+   1   0
+  / \
+ 1   1
+```
+[Unival Trees](dcp_008.py)
+
+
+----
+
+9. ### Airbnb
+Given a list of integers, write a function that returns the largest sum of *non-adjacent numbers*. Numbers can be 0 or negative.  
+For example, `[2, 4, 6, 8]` should return `12`, since we pick `4 and 8`. `[5, 1, 1, 5]` should return `10`, since we `pick 5 and 5`.
+
+[Non-adjacent Sum](dcp_009.py)
+
+----
+
+274.     ### Facebook
 
 Given a string consisting of _parentheses, single digits, and positive and negative signs_, convert the string into a mathematical expression to obtain the answer.  
 
@@ -29,11 +110,11 @@ Don't use eval or a similar built-in parser.
 
 For example, given `-1 + (2 + 3)`, you should return `4`.
 
-[basic calculator](dcp_274.py)
+[Basic Calculator](dcp_274.py)
 
 ----
 
-173. ### Stripe
+173.     ### Stripe
 
 Write a function to flatten a nested dictionary. Namespace the keys with a period.
 
@@ -56,33 +137,11 @@ it should become:
     "foo.bar.baz": 8
 }
 ```
-[flatten dictionary](dcp_173.py)
-
-----
-5. ### Mozilla
-
-A bridge in a connected (undirected) graph is an edge that, if removed, causes the graph to become disconnected. Find all the bridges in a graph.
-
-[bridges](dcp_005.py)
+[Flatten Dictionary](dcp_173.py)
 
 ----
 
-6. ### Google
-
-Implement an `LFU` (Least Frequently Used) cache. It should be able to be initialized with a cache size n, and contain the following methods:  
-
-`set(key, value)`: sets key to value. If there are already n items in the cache and we are adding a new item, then it should also remove the least frequently used item. If there is a tie, then the least recently used key should be removed.  
-
-`get(key)`: gets the value at key. If no such key exists, return null.
-Each operation should run in O(1) time.
-
-Similar [leetcode, Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/)  
-
-[LFU](dcp_006.py)
-
-----
-
-7. ### Triplebyte
+301. ### Triplebyte
 
 Implement a data structure which carries out the following operations without resizing the underlying array:
 
@@ -90,11 +149,11 @@ Implement a data structure which carries out the following operations without re
 `check(value)` : Check whether a value is in the set.  
 The check method may return occasional false positives (in other words, incorrectly identifying an element as part of the set), but should always correctly identify a true element.  
 
-[Bloom Filter](dcp_007.py)
+[Bloom Filter](dcp_301.py)
 
 ----
 
-8. ### Amazon
+43. ### Amazon
 
 Implement a stack that has the following methods:
 
@@ -104,28 +163,7 @@ Implement a stack that has the following methods:
 
 Each method should run in constant time.
 
-[Stack](dcp_008.py)
-
-----
-
-9. ### Uber
-
-Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
-
-For example,  
-input: `[1, 2, 3, 4, 5]`, output: `[120, 60, 40, 30, 24]`.   
-input: `[3, 2, 1]`, output: `[2, 3, 6]`
-
-[Product except self](dcp_009.py)
-
-----
-
-Given K sorted lists. Return a new sorted merged list from K sorted lists, each with size N
-
-Input: `[[10, 15, 30], [12, 15, 20], [17, 20, 32]]`,  
-Output: `[10, 12, 15, 15, 17, 20, 20, 30, 32]`  
-
-[Merge lists](dcp_000.py)
+[Stack](dcp_043.py)
 
 ----
 
@@ -251,7 +289,7 @@ _Note that there can be multiple instances of each integer_.
 
 Given this string, return the original integers in sorted order. In the example above, this would be `357`.
 
-[Longest Path](dcp_359.py)
+[Number Anagram](dcp_359.py)
 
 ----
 
@@ -572,18 +610,6 @@ For example, given `[9, 11, 8, 5, 7, 10]`, you should return `5`, since you coul
 
 ----
 
-4. ### Stripe
-
-Given an array of integers, find the first missing positive integer in linear time and constant space. In other words, find the lowest positive integer that does not exist in the array. The array can contain duplicates and negative numbers as well.
-
-For example, the input `[3, 4, -1, 1]` should give `2`. The input `[1, 2, 0]` should give `3`.
-
-You can modify the input array in-place.
-
-[First missing positive number](dcp_004.py)
-
-----
-
 273. ### Apple
 
 A fixed point in an array is an element whose value is equal to its index. Given a sorted array of distinct elements, return a fixed point, if one exists. Otherwise, return False.
@@ -591,5 +617,64 @@ A fixed point in an array is an element whose value is equal to its index. Given
 For example, given `[-6, 0, 2, 40]`, you should return `2`. Given `[1, 5, 7, 8]`, you should return False.
 
 [Fixed Point](dcp_273.py)
+
+----
+
+244. ### Square
+
+The `Sieve of Eratosthenes` is an algorithm used to generate all prime numbers smaller than N. The method is to take increasingly larger prime numbers, and mark their multiples as composite.
+
+For example, to find all primes less than 100, we would first mark [4, 6, 8, ...] (multiples of two), then [6, 9, 12, ...] (multiples of three), and so on. Once we have done this for all primes less than N, the unmarked numbers that remain will be prime.
+
+[Sieve of Eratosthenes](dcp_244.py)
+
+----
+
+22. ### Microsoft
+
+Given a dictionary of words and a string made up of those words (no spaces), return the original sentence in a list. If there is more than one possible reconstruction, return any of them. If there is no possible reconstruction, then return null.
+
+For example, given the set of words `'quick', 'brown', 'the', 'fox'`, and the string `"thequickbrownfox"`, you should return ['the', 'quick', 'brown', 'fox'].
+
+Given the set of words `'bed', 'bath', 'bedbath', 'and', 'beyond'`, and the string `"bedbathandbeyond"`, return either `['bed', 'bath', 'and', 'beyond']` or `['bedbath', 'and', 'beyond']`.
+
+[Sentence break](dcp_022.py)
+
+----
+
+283. ### Google
+
+A regular number in mathematics is defined as one which evenly divides some power of 60. Equivalently, we can say that a regular number is one whose only prime divisors are `2, 3, and 5`.  
+
+These numbers have had many applications, from helping ancient Babylonians keep time to tuning instruments according to the diatonic scale.
+
+Given an integer N, write a program that returns, in order, the first N regular numbers.
+
+[Regular Number](dcp_283.py)
+
+----
+
+314. ### Spotify
+
+You are the technical director of WSPT radio, serving listeners nationwide. For simplicity's sake we can consider each listener to live along a horizontal line stretching from `0 (west)` to `1000 (east)`.
+
+Given a list of `N` listeners, and a list of `M` radio towers, each placed at various locations along this line, determine what the minimum broadcast range would have to be in order for each listener's home to be covered.
+
+For example, suppose `listeners = [1, 5, 11, 20]`, and `towers = [4, 8, 15]`. In this case the *minimum* range would be `5`, since that would be required for the *tower at position 15* to reach the *listener at position 20*.
+
+[Tower Range](dcp_314.py)
+
+----
+
+336. ### Microsoft
+
+Write a program to determine how many distinct ways there are to create a max heap from a list of N given integers.  
+For example, if `N = 3`, and our integers are `[1, 2, 3]`, there are `two ways`, shown below.  
+```
+  3      3
+ / \    / \
+1   2  2   1
+```
+[Number of Heaps](dcp_336.py)
 
 ----

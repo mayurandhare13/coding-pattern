@@ -1,31 +1,25 @@
-from heapq import heappush, heappop
+def productExceptSelf(nums):
+    size = len(nums)
 
-start_factor_count = [2, 3, 5]
+    ans, L, R = [0] * size, [0] * size, [0] * size
 
-
-def populate_numbers(n, heap, regular_nums):
-    if len(regular_nums) >= n:
-        return
-
-    low_num = heappop(heap)
-    regular_nums.add(low_num)
-
-    for k in start_factor_count:
-        heappush(heap, low_num * k)
+    L[0] = 1
+    for i in range(1, size):
+        L[i] = L[i - 1] * nums[i - 1]
     
-    populate_numbers(n, heap, regular_nums)
+    R[size - 1] = 1
+
+    for i in range(size - 2, -1, -1):
+        R[i] = R[i + 1] * nums[i + 1]
     
+    for i in range(size):
+        ans[i] = L[i] * R[i]
 
-def get_n_regular(n):
-    heap = []
-    regular_nums = set()
-
-    heappush(heap, 60)
-    populate_numbers(n, heap, regular_nums)
-
-    return sorted(regular_nums)
-
+    return ans
 
 if __name__ == '__main__':
-    regular_numbers = get_n_regular(10)
-    print(regular_numbers)
+    ans = productExceptSelf([1, 2, 3, 4, 5])
+    print(ans)
+    
+    ans = productExceptSelf([3, 2, 1])
+    print(ans)
