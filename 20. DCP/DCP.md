@@ -102,54 +102,61 @@ For example, `[2, 4, 6, 8]` should return `12`, since we pick `4 and 8`. `[5, 1,
 
 ----
 
-274.     ### Facebook
+11. ### Twitter
 
-Given a string consisting of _parentheses, single digits, and positive and negative signs_, convert the string into a mathematical expression to obtain the answer.  
+Implement an `autocomplete` system. That is, given a query string s and a set of all possible query strings, return all strings in the set that have s as a prefix.
 
-Don't use eval or a similar built-in parser.
+For example, given the query string `de` and the set of strings `[dog, deer, deal]`, return `[deer, deal]`.
 
-For example, given `-1 + (2 + 3)`, you should return `4`.
-
-[Basic Calculator](dcp_274.py)
+[Autocomplete system](dcp_011.py)
 
 ----
 
-173.     ### Stripe
+12. ### Amazon
+There exists a staircase with `N` steps, and you can climb up either `1 or 2 steps` at a time. Given N, write a function that returns the number of unique ways you can climb the staircase. The order of the steps matters.
 
-Write a function to flatten a nested dictionary. Namespace the keys with a period.
-
-For example, given the following dictionary:
+For example, if N is `4`, then there are `5` unique ways:
 ```
-{
-    "key": 3,
-    "foo": {
-        "a": 5,
-        "bar": {
-            "baz": 8
-        }
-    }
-}
-it should become:
-
-{
-    "key": 3,
-    "foo.a": 5,
-    "foo.bar.baz": 8
-}
+1, 1, 1, 1
+2, 1, 1
+1, 2, 1
+1, 1, 2
+2, 2
 ```
-[Flatten Dictionary](dcp_173.py)
+What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? For example, if `X = {1, 3, 5}`, you could climb `1, 3, or 5` steps at a time.
+
+[Staircase](dcp_012.py)
 
 ----
 
-301. ### Triplebyte
+13. ### Amazon
+Given an integer `k` and a string `s`, find the length of the longest substring that contains at most k distinct characters.
 
-Implement a data structure which carries out the following operations without resizing the underlying array:
+For example, given `s = “abcba”` and `k = 2`, the longest substring with k distinct characters is `“bcb”`.
 
-`add(value)` : Add a value to the set of values.  
-`check(value)` : Check whether a value is in the set.  
-The check method may return occasional false positives (in other words, incorrectly identifying an element as part of the set), but should always correctly identify a true element.  
+[Longest Substring k characters](dcp_013.py)
 
-[Bloom Filter](dcp_301.py)
+----
+
+14. ### Google
+
+The area of a circle is defined as `r^2`. **Estimate** `\pi` to 3 decimal places using a Monte Carlo method.
+
+Hint: The basic equation of a circle is x^2 + y^2 = r^2.
+
+[Pi](dcp_014.py)
+
+----
+
+22. ### Microsoft
+
+Given a dictionary of words and a string made up of those words (no spaces), return the original sentence in a list. If there is more than one possible reconstruction, return any of them. If there is no possible reconstruction, then return null.
+
+For example, given the set of words `'quick', 'brown', 'the', 'fox'`, and the string `"thequickbrownfox"`, you should return ['the', 'quick', 'brown', 'fox'].
+
+Given the set of words `'bed', 'bath', 'bedbath', 'and', 'beyond'`, and the string `"bedbathandbeyond"`, return either `['bed', 'bath', 'and', 'beyond']` or `['bedbath', 'and', 'beyond']`.
+
+[Sentence break](dcp_022.py)
 
 ----
 
@@ -167,19 +174,11 @@ Each method should run in constant time.
 
 ----
 
-196. ### Apple
+45. ### Two Sigma
 
-Given the root of a binary tree, find the most frequent subtree sum. The subtree sum of a node is the sum of all values under a node, including the node itself.
+Using a function `rand5()` that returns an integer from 1 to 5 (inclusive) with uniform probability, implement a function `rand7()` that returns an integer from 1 to 7 (inclusive).
 
-For example, given the following tree:
-```
-  5
- / \
-2  -5
-```
-Return `2` as it occurs twice: once as the left leaf, and once as the sum of 2 + 5 - 5.
-
-[Frequent Tree Sum](dcp_196.py)
+[Uniform Probability](dcp_045.py)
 
 ----
 
@@ -194,60 +193,45 @@ The longest palindromic substring of `bananas` is `anana`.
 
 ----
 
-116. ### Jane Street
+47. ### Facebook
 
-Generate a finite, but an arbitrarily large binary tree quickly in O(1).
+Given a array of numbers representing the stock prices of a company in  order, write a function that calculates the maximum profit you could have made from buying and selling that stock once. You must buy before you can sell it.
 
-That is, `generate()` should return a tree whose size is unbounded but finite.
+For example, given `[9, 11, 8, 5, 7, 10]`, you should return `5`, since you could **buy** the stock at `5` dollars and **sell** it at `10` dollars.
 
-[Huge Tree](dcp_116.py)
-
-----
-
-223. ### Palantir
-
-Typically, an implementation of in-order traversal of a binary tree has `O(h)` space complexity, where h is the height of the tree. Write a program to compute the in-order traversal of a binary tree using `O(1)` space.
-
-[Morris Traversal](dcp_223.py)
+[Buy Sell Stock](dcp_047.py)
 
 ----
 
-348. ### Zillow.
+61. ### Google
 
-A ternary search tree is a trie-like data structure where each node may have up to three children. Here is an example which represents the words code, cob, be, ax, war, and we.
+Implement integer exponentiation. That is, implement the `pow(x, y)` function, where `x` and `y` are integers and returns `x^y`.
 
-```
-       c
-    /  |  \
-   b   o   w
- / |   |   |
-a  e   d   a
-|    / |   | \ 
-x   b  e   r  e  
-```
+Do this faster than the naive method of repeated multiplication.
 
-The tree is structured according to the following rules:
+For example, `pow(2, 10)` should return `1024`.
 
-left child nodes link to words lexicographically earlier than the parent prefix  
-right child nodes link to words lexicographically later than the parent prefix  
-middle child nodes continue the current word  
-For instance, since code is the first word inserted in the tree, and cob lexicographically precedes cod, cob is represented as a left child extending from cod.  
-
-Implement insertion and search functions for a ternary search tree.
-
-[Ternary Tree](dcp_348.py)
+[Power](dcp_061.py)
 
 ----
 
-754. ### Square
+66. ### Square
+    
+Assume you have access to a function `toss_biased()` which returns 0 or 1 with a probability that's not 50-50 (but also not 0-100 or 100-0). You do not know the bias of the coin.
 
-In front of you is a row of N coins, with values `v1, v1, ..., vn`
+Write a function to simulate an unbiased coin toss.
 
-You are asked to play the following game. You and an opponent take turns choosing either the first or last coin from the row, removing it from the row, and receiving the value of the coin.
+[Biased Coin](dcp_066.py)
 
-Write a program that returns the maximum amount of money you can win with certainty, if you move first, assuming your opponent plays optimally.
+----
 
-[Coin Game](dcp_754.py)
+69. ### Facebook
+
+Given a list of integers, return the largest product that can be made by multiplying any three integers.  
+For example, if the list is `[-10, -10, 5, 2]`, we should return `500`, since that's `-10 * -10 * 5`.  
+You can assume the list has at least three integers.  
+
+[Max Product](dcp_069.py)
 
 ----
 
@@ -280,16 +264,214 @@ Should return null, since we have an infinite loop.
 
 ----
 
-359. ### Slack
+82. ### Microsoft
 
-You are given a string formed by concatenating several words corresponding to the integers zero through nine and then anagramming.
+Using a `read7()` method that returns `7` characters from a file, implement `readN(n)` which reads `n` characters.
 
-For example, the input could be `niesevehrtfeev`, which is an anagram of `threefiveseven`.  
-_Note that there can be multiple instances of each integer_.
+For example, given a file with the content “Hello world”, three read7() returns “Hello w”, “orld” and then “”.
 
-Given this string, return the original integers in sorted order. In the example above, this would be `357`.
+[Read File](dcp_082.py)
 
-[Number Anagram](dcp_359.py)
+----
+
+101. ### Alibaba
+
+Given an even number (greater than 2), return two prime numbers whose sum will be equal to the given number.
+
+A solution will always exist. See [Goldbach’s conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture).
+
+Example:
+```
+Input: 4
+Output: 2 + 2 = 4
+```
+If there are more than one solution possible, return the lexicographically smaller solution.
+
+[Prime Numbers](dcp_101.py)
+
+----
+
+116. ### Jane Street
+
+Generate a finite, but an arbitrarily large binary tree quickly in O(1).
+
+That is, `generate()` should return a tree whose size is unbounded but finite.
+
+[Huge Tree](dcp_116.py)
+
+----
+
+152. ### Triplebyte
+
+You are given `n` numbers as well as `n` probabilities that sum up to `1`. Write a function to generate one of the numbers with its corresponding probability.
+
+For example, given the numbers `[1, 2, 3, 4]` and probabilities `[0.1, 0.5, 0.2, 0.2]`, your function should return 1 10% of the time, 2 50% of the time, and 3 and 4 20% of the time.
+
+You can generate random numbers between 0 and 1 uniformly.
+
+[Arbitrary Probability](dcp_152.py)
+
+----
+
+173. ### Stripe
+
+Write a function to flatten a nested dictionary. Namespace the keys with a period.
+
+For example, given the following dictionary:
+```
+{
+    "key": 3,
+    "foo": {
+        "a": 5,
+        "bar": {
+            "baz": 8
+        }
+    }
+}
+it should become:
+
+{
+    "key": 3,
+    "foo.a": 5,
+    "foo.bar.baz": 8
+}
+```
+[Flatten Dictionary](dcp_173.py)
+
+----
+
+195. ### Google
+
+Let `A` be an `N by M` matrix in which every row and every column is sorted.
+
+Given `i1, j1, i2, and j2`, compute the number of elements of M _smaller_ than `M[i1, j1]` and _larger_ than `M[i2, j2]`.
+
+For example, given the following matrix:
+```
+[[1, 3, 7, 10, 15, 20],
+ [2, 6, 9, 14, 22, 25],
+ [3, 8, 10, 15, 25, 30],
+ [10, 11, 12, 23, 30, 35],
+ [20, 25, 30, 35, 40, 45]]
+```
+And `i1 = 1, j1 = 1, i2 = 3, j2 = 3`, return `14` as there are 14 numbers in the matrix smaller than 6 or greater than 23.
+
+[Count Numbers](dcp_195.py)
+
+----
+
+196. ### Apple
+
+Given the root of a binary tree, find the most frequent subtree sum. The subtree sum of a node is the sum of all values under a node, including the node itself.
+
+For example, given the following tree:
+```
+  5
+ / \
+2  -5
+```
+Return `2` as it occurs twice: once as the left leaf, and once as the sum of 2 + 5 - 5.
+
+[Frequent Tree Sum](dcp_196.py)
+
+----
+
+202. ### Palantir
+
+Write a program that checks whether an integer is a palindrome. For example, `121` is a `palindrome`, as well as 888. 678 is not a palindrome. _Do not convert the integer into a string_.
+
+[Number Palindrome](dcp_202.py)
+
+----
+
+212. ### Dropbox
+
+Spreadsheets often use this alphabetical encoding for its columns: `"A", "B", "C", ..., "AA", "AB", ..., "ZZ", "AAA", "AAB", ....`
+
+Given a column number, return its alphabetical column id. For example, given `1`, return `A`. Given `27`, return `AA`.
+
+[Column Number](dcp_212.py)
+
+----
+
+220. ### Square
+
+In front of you is a row of N coins, with values `v1, v1, ..., vn`
+
+You are asked to play the following game. You and an opponent take turns choosing either the first or last coin from the row, removing it from the row, and receiving the value of the coin.
+
+Write a program that returns the maximum amount of money you can win with certainty, if you move first, assuming your opponent plays optimally.
+
+[Coin Game](dcp_220.py)
+
+----
+
+221. ### Zillow
+
+Let's define a `sevenish` number to be one which is either a power of `7`, or the sum of unique powers of `7`. The first few sevenish numbers are `1, 7, 8, 49, and so on`.  
+Create an algorithm to find the nth sevenish number.
+
+[Sevenish Number](dcp_221.py)
+
+----
+
+223. ### Palantir
+
+Typically, an implementation of in-order traversal of a binary tree has `O(h)` space complexity, where h is the height of the tree. Write a program to compute the in-order traversal of a binary tree using `O(1)` space.
+
+[Morris Traversal](dcp_223.py)
+
+----
+
+225. ### Bloomberg
+
+There are `N` prisoners standing in a circle, waiting to be executed. The executions are carried out starting with the `k`th person, and removing every successive `k`th person going clockwise until there is no one left.
+
+Given `N` and `k`, write an algorithm to determine where a prisoner should stand in order to be the last survivor.
+
+For example, if `N = 5` and `k = 2`, the order of executions would be `[2, 4, 1, 5, 3]`, so you should return `3`.
+
+Bonus: Find an `O(log N)` solution if `k = 2`.
+
+[Josephus Problem](dcp_225.py)
+
+----
+
+228. ### Twitter
+
+Given a list of numbers, create an algorithm that arranges them in order to form the largest possible integer. For example, given `[10, 7, 76, 415]`, you should return `77641510`.
+
+[Largest Number](dcp_228.py)
+
+----
+
+230. ### Goldman Sachs
+
+You are given `N` identical eggs and access to a building with `k` floors. Your task is to find the lowest floor that will cause an egg to break, if dropped from that floor. Once an egg breaks, it cannot be dropped again. If an egg breaks when dropped from the `x`th floor, you can assume it will also break when dropped from any floor greater than x.
+
+Write an algorithm that finds the `minimum number of trial drops` it will take, in the worst case, to identify this floor.
+
+For example, if `N = 1` and `k = 5`, we will need to try dropping the egg at every floor, beginning with the first, until we reach the fifth floor, so our solution will be 5.
+
+[Min Drops](dcp_230.py)
+
+----
+
+235. ### Facebook
+
+Given an array of numbers of length N, find both the minimum and maximum using less than `2 * (N - 2)` comparisons
+
+[Minimum Comparison](dcp_235.py)
+
+----
+
+236. ### Nvidia
+
+You are given a list of `N` points `(x1, y1), (x2, y2), ..., (xN, yN)` representing a _polygon_. You can assume these points are given in order; that is, you can construct the polygon by connecting point 1 to point 2, point 2 to point 3, and so on, finally looping around to connect point N to point 1.
+
+Determine if a new point p lies inside this polygon. (If p is on the boundary of the polygon, you should return False).
+
+[Point in Polygon](dcp_236.py)
 
 ----
 
@@ -309,102 +491,7 @@ Given perfect knowledge of the sequence of cards in the deck, implement a blackj
 
 ----
 
-45. ### Two Sigma
-
-Using a function `rand5()` that returns an integer from 1 to 5 (inclusive) with uniform probability, implement a function `rand7()` that returns an integer from 1 to 7 (inclusive).
-
-[Uniform Probability](dcp_045.py)
-
-----
-
-228. ### Twitter
-
-Given a list of numbers, create an algorithm that arranges them in order to form the largest possible integer. For example, given `[10, 7, 76, 415]`, you should return `77641510`.
-
-[Largest Number](dcp_228.py)
-
-----
-
-235. ### Facebook
-
-Given an array of numbers of length N, find both the minimum and maximum using less than `2 * (N - 2)` comparisons
-
-[Minimum Comparison](dcp_235.py)
-
-----
-
-289. ### Google
-
-The game of `Nim` is played as follows  
-Starting with three heaps, each containing a variable number of items, two players take turns removing one or more items from a single pile. The player who eventually is forced to take the last stone loses.  
-For example, if the initial heap sizes are `3, 4, and 5`, a game could be played as shown below:
-```
-  A  |  B  |  C
------------------
-  3  |  4  |  5
-  3  |  1  |  3
-  3  |  1  |  3
-  0  |  1  |  3
-  0  |  1  |  0
-  0  |  0  |  0 
-```
-In other words, to start, the first player takes three items from pile B. The second player responds by removing two stones from pile C. The game continues in this way until player one takes last stone and loses.
-
-Given a list of non-zero starting values `[a, b, c]`, and assuming optimal play, determine whether the first player has a forced win.
-
-[Nim Game](dcp_289.py)
-
-----
-
-### Microsoft
-
-Using a `read7()` method that returns `7` characters from a file, implement `readN(n)` which reads `n` characters.
-
-For example, given a file with the content “Hello world”, three read7() returns “Hello w”, “orld” and then “”.
-
-[Read File](dcp_082.py)
-
-----
-
-### Spotify
-
-You have access to ranked lists of songs for various users. Each song is represented as an integer, and more preferred songs appear earlier in each list. For example, the list `[4, 1, 7]` indicates that a user likes song 4 the best, followed by songs 1 and 7.
-
-Given a set of these ranked lists, interleave them to create a playlist that satisfies everyone's priorities.
-
-For example, suppose your input is `{[1, 7, 3], [2, 1, 6, 7, 9], [3, 9, 5]}`. In this case a satisfactory playlist could be `[2, 1, 6, 7, 3, 9, 5]`.
-
-[Interleave Lists](dcp_360.py)
-
-----
-
-230. ### Goldman Sachs
-
-You are given `N` identical eggs and access to a building with `k` floors. Your task is to find the lowest floor that will cause an egg to break, if dropped from that floor. Once an egg breaks, it cannot be dropped again. If an egg breaks when dropped from the `x`th floor, you can assume it will also break when dropped from any floor greater than x.
-
-Write an algorithm that finds the `minimum number of trial drops` it will take, in the worst case, to identify this floor.
-
-For example, if `N = 1` and `k = 5`, we will need to try dropping the egg at every floor, beginning with the first, until we reach the fifth floor, so our solution will be 5.
-
-[Min Drops](dcp_230.py)
-
-----
-
-225.   ### Bloomberg
-
-There are `N` prisoners standing in a circle, waiting to be executed. The executions are carried out starting with the `k`th person, and removing every successive `k`th person going clockwise until there is no one left.
-
-Given `N` and `k`, write an algorithm to determine where a prisoner should stand in order to be the last survivor.
-
-For example, if `N = 5` and `k = 2`, the order of executions would be `[2, 4, 1, 5, 3]`, so you should return `3`.
-
-Bonus: Find an `O(log N)` solution if `k = 2`.
-
-[Josephus Problem](dcp_225.py)
-
-----
-
-241.   ### Palantir
+241. ### Palantir
 
 In academia, the `h-index` is a metric used to calculate the impact of a researcher's papers. It is calculated as follows:
 
@@ -418,88 +505,13 @@ Given a list of paper citations of a researcher, calculate their `h-index`.
 
 ----
 
-353.   ### Square
+244. ### Square
 
-You are given a histogram consisting of rectangles of different heights. These heights are represented in an input list, such that `[1, 3, 2, 5]` corresponds to the following diagram:
-```
-      x
-      x  
-  x   x
-  x x x
-x x x x
-```
-Determine the area of the largest rectangle that can be formed only from the bars of the histogram. For the diagram above, for example, this would be **six**, representing the `2 x 3` area at the bottom right.
+The `Sieve of Eratosthenes` is an algorithm used to generate all prime numbers smaller than N. The method is to take increasingly larger prime numbers, and mark their multiples as composite.
 
-[Largest Rectangle](dcp_353.py)
+For example, to find all primes less than 100, we would first mark [4, 6, 8, ...] (multiples of two), then [6, 9, 12, ...] (multiples of three), and so on. Once we have done this for all primes less than N, the unmarked numbers that remain will be prime.
 
-----
-
-69.  ### Facebook
-
-Given a list of integers, return the largest product that can be made by multiplying any three integers.  
-For example, if the list is `[-10, -10, 5, 2]`, we should return `500`, since that's `-10 * -10 * 5`.  
-You can assume the list has at least three integers.  
-
-[Max Product](dcp_069.py)
-
-----
-
-447.   ### Google
-
-Implement integer exponentiation. That is, implement the `pow(x, y)` function, where `x` and `y` are integers and returns `x^y`.
-
-Do this faster than the naive method of repeated multiplication.
-
-For example, `pow(2, 10)` should return `1024`.
-
-[Power](dcp_447.py)
-
-----
-
-202.   ### Palantir
-
-Write a program that checks whether an integer is a palindrome. For example, `121` is a `palindrome`, as well as 888. 678 is not a palindrome. _Do not convert the integer into a string_.
-
-[Number Palindrome](dcp_202.py)
-
-----
-
-272. ### Spotify
-
-Write a function, `throw_dice(N, faces, total)`, that determines how many ways it is possible to throw `N` dice with some number of faces each to get a specific total.
-
-For example, `throw_dice(3, 6, 7)` should equal `15`.
-
-[Throw Dice](dcp_272.py)
-
-----
-
-338.   ### Facebook
-
-Given an integer n, find the next biggest integer with the same number of 1-bits on.  
-For example, given the number `6`(`0110` in binary), return `9 (1001)`.
-
-[snoob](dcp_338.py)
-
-----
-
-66.  ### Square
-    
-Assume you have access to a function `toss_biased()` which returns 0 or 1 with a probability that's not 50-50 (but also not 0-100 or 100-0). You do not know the bias of the coin.
-
-Write a function to simulate an unbiased coin toss.
-
-[Biased Coin](dcp_066.py)
-
-----
-
-236.   ### Nvidia
-
-You are given a list of `N` points `(x1, y1), (x2, y2), ..., (xN, yN)` representing a _polygon_. You can assume these points are given in order; that is, you can construct the polygon by connecting point 1 to point 2, point 2 to point 3, and so on, finally looping around to connect point N to point 1.
-
-Determine if a new point p lies inside this polygon. (If p is on the boundary of the polygon, you should return False).
-
-[Point in Polygon](dcp_236.py)
+[Sieve of Eratosthenes](dcp_244.py)
 
 ----
 
@@ -531,82 +543,13 @@ You should convert it to:
 
 ----
 
-101. ### Alibaba
+272. ### Spotify
 
-Given an even number (greater than 2), return two prime numbers whose sum will be equal to the given number.
+Write a function, `throw_dice(N, faces, total)`, that determines how many ways it is possible to throw `N` dice with some number of faces each to get a specific total.
 
-A solution will always exist. See [Goldbach’s conjecture](https://en.wikipedia.org/wiki/Goldbach%27s_conjecture).
+For example, `throw_dice(3, 6, 7)` should equal `15`.
 
-Example:
-```
-Input: 4
-Output: 2 + 2 = 4
-```
-If there are more than one solution possible, return the lexicographically smaller solution.
-
-[Prime Numbers](dcp_101.py)
-
-----
-
-221.   ### Zillow
-
-Let's define a `sevenish` number to be one which is either a power of `7`, or the sum of unique powers of `7`. The first few sevenish numbers are `1, 7, 8, 49, and so on`.  
-Create an algorithm to find the nth sevenish number.
-
-[Sevenish Number](dcp_221.py)
-
-----
-
-152. ### Triplebyte
-
-You are given `n` numbers as well as `n` probabilities that sum up to `1`. Write a function to generate one of the numbers with its corresponding probability.
-
-For example, given the numbers `[1, 2, 3, 4]` and probabilities `[0.1, 0.5, 0.2, 0.2]`, your function should return 1 10% of the time, 2 50% of the time, and 3 and 4 20% of the time.
-
-You can generate random numbers between 0 and 1 uniformly.
-
-[Arbitrary Probability](dcp_152.py)
-
-----
-
-212. ### Dropbox
-
-Spreadsheets often use this alphabetical encoding for its columns: `"A", "B", "C", ..., "AA", "AB", ..., "ZZ", "AAA", "AAB", ....`
-
-Given a column number, return its alphabetical column id. For example, given `1`, return `A`. Given `27`, return `AA`.
-
-[Column Number](dcp_212.py)
-
-----
-
-195. ### Google
-
-Let `A` be an `N by M` matrix in which every row and every column is sorted.
-
-Given `i1, j1, i2, and j2`, compute the number of elements of M _smaller_ than `M[i1, j1]` and _larger_ than `M[i2, j2]`.
-
-For example, given the following matrix:
-```
-[[1, 3, 7, 10, 15, 20],
- [2, 6, 9, 14, 22, 25],
- [3, 8, 10, 15, 25, 30],
- [10, 11, 12, 23, 30, 35],
- [20, 25, 30, 35, 40, 45]]
-```
-And `i1 = 1, j1 = 1, i2 = 3, j2 = 3`, return `14` as there are 14 numbers in the matrix smaller than 6 or greater than 23.
-
-[Count Numbers](dcp_195.py)
-
-----
-
-47. ### Facebook
-
-
-Given a array of numbers representing the stock prices of a company in  order, write a function that calculates the maximum profit you could have made from buying and selling that stock once. You must buy before you can sell it.
-
-For example, given `[9, 11, 8, 5, 7, 10]`, you should return `5`, since you could **buy** the stock at `5` dollars and **sell** it at `10` dollars.
-
-[Buy Sell Stock](dcp_047.py)
+[Throw Dice](dcp_272.py)
 
 ----
 
@@ -620,25 +563,15 @@ For example, given `[-6, 0, 2, 40]`, you should return `2`. Given `[1, 5, 7, 8]`
 
 ----
 
-244. ### Square
+274. ### Facebook
 
-The `Sieve of Eratosthenes` is an algorithm used to generate all prime numbers smaller than N. The method is to take increasingly larger prime numbers, and mark their multiples as composite.
+Given a string consisting of _parentheses, single digits, and positive and negative signs_, convert the string into a mathematical expression to obtain the answer.  
 
-For example, to find all primes less than 100, we would first mark [4, 6, 8, ...] (multiples of two), then [6, 9, 12, ...] (multiples of three), and so on. Once we have done this for all primes less than N, the unmarked numbers that remain will be prime.
+Don't use eval or a similar built-in parser.
 
-[Sieve of Eratosthenes](dcp_244.py)
+For example, given `-1 + (2 + 3)`, you should return `4`.
 
-----
-
-22. ### Microsoft
-
-Given a dictionary of words and a string made up of those words (no spaces), return the original sentence in a list. If there is more than one possible reconstruction, return any of them. If there is no possible reconstruction, then return null.
-
-For example, given the set of words `'quick', 'brown', 'the', 'fox'`, and the string `"thequickbrownfox"`, you should return ['the', 'quick', 'brown', 'fox'].
-
-Given the set of words `'bed', 'bath', 'bedbath', 'and', 'beyond'`, and the string `"bedbathandbeyond"`, return either `['bed', 'bath', 'and', 'beyond']` or `['bedbath', 'and', 'beyond']`.
-
-[Sentence break](dcp_022.py)
+[Basic Calculator](dcp_274.py)
 
 ----
 
@@ -651,6 +584,41 @@ These numbers have had many applications, from helping ancient Babylonians keep 
 Given an integer N, write a program that returns, in order, the first N regular numbers.
 
 [Regular Number](dcp_283.py)
+
+----
+
+289. ### Google
+
+The game of `Nim` is played as follows  
+Starting with three heaps, each containing a variable number of items, two players take turns removing one or more items from a single pile. The player who eventually is forced to take the last stone loses.  
+For example, if the initial heap sizes are `3, 4, and 5`, a game could be played as shown below:
+```
+  A  |  B  |  C
+-----------------
+  3  |  4  |  5
+  3  |  1  |  3
+  3  |  1  |  3
+  0  |  1  |  3
+  0  |  1  |  0
+  0  |  0  |  0 
+```
+In other words, to start, the first player takes three items from pile B. The second player responds by removing two stones from pile C. The game continues in this way until player one takes last stone and loses.
+
+Given a list of non-zero starting values `[a, b, c]`, and assuming optimal play, determine whether the first player has a forced win.
+
+[Nim Game](dcp_289.py)
+
+----
+
+301. ### Triplebyte
+
+Implement a data structure which carries out the following operations without resizing the underlying array:
+
+`add(value)` : Add a value to the set of values.  
+`check(value)` : Check whether a value is in the set.  
+The check method may return occasional false positives (in other words, incorrectly identifying an element as part of the set), but should always correctly identify a true element.  
+
+[Bloom Filter](dcp_301.py)
 
 ----
 
@@ -676,5 +644,82 @@ For example, if `N = 3`, and our integers are `[1, 2, 3]`, there are `two ways`,
 1   2  2   1
 ```
 [Number of Heaps](dcp_336.py)
+
+----
+
+338. ### Facebook
+
+Given an integer n, find the next biggest integer with the same number of 1-bits on.  
+For example, given the number `6`(`0110` in binary), return `9 (1001)`.
+
+[snoob](dcp_338.py)
+
+----
+
+348. ### Zillow.
+
+A ternary search tree is a trie-like data structure where each node may have up to three children. Here is an example which represents the words code, cob, be, ax, war, and we.
+
+```
+       c
+    /  |  \
+   b   o   w
+ / |   |   |
+a  e   d   a
+|    / |   | \ 
+x   b  e   r  e  
+```
+
+The tree is structured according to the following rules:
+
+left child nodes link to words lexicographically earlier than the parent prefix  
+right child nodes link to words lexicographically later than the parent prefix  
+middle child nodes continue the current word  
+For instance, since code is the first word inserted in the tree, and cob lexicographically precedes cod, cob is represented as a left child extending from cod.  
+
+Implement insertion and search functions for a ternary search tree.
+
+[Ternary Tree](dcp_348.py)
+
+----
+
+353. ### Square
+
+You are given a histogram consisting of rectangles of different heights. These heights are represented in an input list, such that `[1, 3, 2, 5]` corresponds to the following diagram:
+```
+      x
+      x  
+  x   x
+  x x x
+x x x x
+```
+Determine the area of the largest rectangle that can be formed only from the bars of the histogram. For the diagram above, for example, this would be **six**, representing the `2 x 3` area at the bottom right.
+
+[Largest Rectangle](dcp_353.py)
+
+----
+
+359. ### Slack
+
+You are given a string formed by concatenating several words corresponding to the integers zero through nine and then anagramming.
+
+For example, the input could be `niesevehrtfeev`, which is an anagram of `threefiveseven`.  
+_Note that there can be multiple instances of each integer_.
+
+Given this string, return the original integers in sorted order. In the example above, this would be `357`.
+
+[Number Anagram](dcp_359.py)
+
+----
+
+360. ### Spotify
+
+You have access to ranked lists of songs for various users. Each song is represented as an integer, and more preferred songs appear earlier in each list. For example, the list `[4, 1, 7]` indicates that a user likes song 4 the best, followed by songs 1 and 7.
+
+Given a set of these ranked lists, interleave them to create a playlist that satisfies everyone's priorities.
+
+For example, suppose your input is `{[1, 7, 3], [2, 1, 6, 7, 9], [3, 9, 5]}`. In this case a satisfactory playlist could be `[2, 1, 6, 7, 3, 9, 5]`.
+
+[Interleave Lists](dcp_360.py)
 
 ----
