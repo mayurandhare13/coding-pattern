@@ -19,20 +19,20 @@ class TreeDiameter:
     def find_diameter(self, root):
         self.calculate_height(root)
         return self.treeDiameter
-    
+
     def calculate_height(self, currentNode):
         if currentNode is None:
             return 0
-        
+
         leftTreeHeight = self.calculate_height(currentNode.left)
         rightTreeHeight = self.calculate_height(currentNode.right)
-        
+
         # diameter at the current node will be equal to the height of left subtree +
         # the height of right sub-trees + '1' for the current node
         diameter = leftTreeHeight + rightTreeHeight + 1
         self.treeDiameter = max(self.treeDiameter, diameter)
 
-        # height of the current node will be equal to the maximum of the hights of
+        # height of the current node will be equal to the maximum of the heights of
         # left or right subtrees + '1' for the current node
         return max(leftTreeHeight, rightTreeHeight) + 1
 

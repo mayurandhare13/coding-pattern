@@ -6,8 +6,11 @@ def pick(bigStream) -> int:
     randomElement = None
 
     for i, e in enumerate(bigStream):
+        # i = 0, we picked uniformly from list [0, 0]
         if i == 0:
             randomElement = e
+        
+        # 1 / i * (1 - (1 / (i + 1))) --> 1 / (i + 1)
         elif random.randint(1, i+1) == 1:
             randomElement = e
 
