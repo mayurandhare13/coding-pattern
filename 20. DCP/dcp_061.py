@@ -1,4 +1,6 @@
 def pow(x: int, n: int):
+    # if power is negative, make it positive
+    # easy to divide positive number till 1
     if n < 0:
         n = -n
         x = 1/x
@@ -17,5 +19,5 @@ def pow(x: int, n: int):
 
 
 if __name__ == '__main__':
-    print(pow(2, 9))
-    print(pow(2, -2))
+    assert pow(2, 9) == 512
+    assert pow(2, -2) == 0.25

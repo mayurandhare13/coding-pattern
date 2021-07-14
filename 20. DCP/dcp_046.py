@@ -50,8 +50,8 @@ def expandAround(s, left, right):
 
 
 if __name__ == '__main__':
-    print(palindromeSubstring('aabcdcb'))
-    print(longestPalindrome('aabcdcb'))
+    assert palindromeSubstring('aabcdcb') == 5
+    assert longestPalindrome('aabcdcb') == 'bcdcb'
 
-    print(palindromeSubstring('banana'))
-    print(longestPalindrome('banana'))
+    assert palindromeSubstring('banana') == 5
+    assert longestPalindrome('banana') == 'anana'

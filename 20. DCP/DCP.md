@@ -8,6 +8,7 @@ Output: `[10, 12, 15, 15, 17, 20, 20, 30, 32]`
 ----
 
 1.  ### Amazon
+
 Given a string s and an integer k, break up the string into multiple lines such that each line has a length of k or less. You must break it up so that words don't break across lines. Each line has to have the maximum possible amount of words. If there's no way to break the text up, then return null.  
 
 You can assume that there are no spaces at the ends of the string and that there is exactly one space between each word.
@@ -468,6 +469,89 @@ Given the root to a binary search tree, find the second largest node in the tree
 
 ----
 
+37. ### Google
+
+The power set of a set is the set of all its subsets. Write a function that, given a set, generates its power set.
+
+For example, given the set `{1, 2, 3}`, it should return `{ {}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3} }`.
+
+You may also use a list or array to represent a set.
+
+[Power Set](dcp_037.py)
+
+----
+
+38. ### Microsoft
+
+You have an N by N board. Write a function that, given N, returns *the **number** of possible arrangements* of the board where N queens can be placed on the board without threatening each other, i.e. no two queens share the same row, column, or diagonal.
+
+[N queens count](dcp_038.py)
+
+----
+
+39. ### Dropbox
+
+Conway’s Game of Life takes place on an infinite two-dimensional board of square cells. Each cell is either dead or alive, and at each tick, the following rules apply:
+
+- Any live cell with less than two live neighbours dies.
+
+- Any live cell with two or three live neighbours remains living.
+
+- Any live cell with more than three live neighbours dies.
+
+- Any dead cell with exactly three live neighbours becomes a live cell. 
+
+A cell neighbours another cell if it is horizontally, vertically, or diagonally adjacent.
+
+Implement Conway’s Game of Life. It should be able to be initialized with a starting list of live cell coordinates and the number of steps it should run for. Once initialized, it should print out the board state at each step. Since it’s an infinite board, print out only the relevant coordinates, i.e. from the top-leftmost live cell to bottom-rightmost live cell.
+
+[Game of Life](dcp_039.py)
+
+----
+
+40. ### Google
+
+Given an array of integers where every integer occurs three times except for one integer, which only occurs once, find and return the non-duplicated integer.
+
+For example,
+
+- `[6, 1, 3, 3, 3, 6, 6]`, return `1`
+- `[13, 19, 13, 13]`, return `19`
+
+Do this in `O(N)` time and `O(1)` space.
+
+[Single Number](dcp_040.py)
+
+----
+
+41. ### Facebook
+
+Given an unordered list of flights taken by someone, each represented as (origin, destination) pairs, and a starting airport, compute the person’s itinerary. If no such itinerary exists, return null. If there are multiple possible itineraries, return the lexicographically smallest one. All flights must be used in the itinerary.
+
+For example, given the list of flights `[(‘SFO’, ‘HKO’), (‘YYZ’, ‘SFO’), (‘YUL’, ‘YYZ’), (‘HKO’, ‘ORD’)]` and starting airport `‘YUL’`, you should return the list `[‘YUL’, ‘YYZ’, ‘SFO’, ‘HKO’, ‘ORD’]`.
+
+Given the list of flights `[(‘SFO’, ‘COM’), (‘COM’, ‘YYZ’)]` and starting airport `‘COM’`, you should return `null`.
+
+Given the list of flights `[(‘A’, ‘B’), (‘A’, ‘C’), (‘B’, ‘C’), (‘C’, ‘A’)]` and starting airport `‘A’`, you should return the list `[‘A’, ‘B’, ‘C’, ‘A’, ‘C’]` even though `[‘A’, ‘C’, ‘A’, ‘B’, ‘C’]` is also a valid itinerary. However, the first one is lexicographically smaller.
+
+[Flight Itinerary](dcp_041.py)
+
+----
+
+42. ### Google
+
+Given a list of integers S and a target number k, write a function that returns a subset of S that adds up to k.
+
+If such a subset cannot be made, then return null.
+
+Integers can appear more than once in the list. You may assume all numbers in the list are positive.
+
+For example, given `S = [12, 1, 61, 5, 9, 2]` and `k = 24`, return `[12, 9, 2, 1]` since it sums up to 24.
+
+[Subset Sum](dcp_042.py)
+
+----
+
 43. ### Amazon
 
 Implement a stack that has the following methods:
@@ -479,6 +563,21 @@ Implement a stack that has the following methods:
 Each method should run in constant time.
 
 [Stack](dcp_043.py)
+
+----
+
+44. ### Google
+
+We can determine how `out of order` an array A is by counting the number of inversions it has.
+Two elements A[i] and A[j] form an inversion if `A[i] > A[j]` but `i < j`. That is, a smaller element appears after a larger element.
+
+Given an array, count the number of inversions it has. Do this faster than O(N^2) time.
+
+You may assume each element in the array is distinct.
+
+For example, a sorted list has zero inversions. The array `[2, 4, 1, 3, 5]` has three inversions: `(2, 1), (4, 1), and (4, 3)`. The array [5, 4, 3, 2, 1] has ten inversions: every distinct pair forms an inversion.
+
+[Inversions](dcp_044.py)
 
 ----
 
@@ -511,6 +610,174 @@ For example, given `[9, 11, 8, 5, 7, 10]`, you should return `5`, since you coul
 
 ----
 
+48. ### Google
+
+Given **pre-order** and **in-order** traversals of a binary tree, write a function to reconstruct the tree.
+
+For example, given the following
+
+Preorder traversal: `[a, b, d, e, c, f, g]`
+
+Inorder traversal: `[d, b, e, a, f, c, g]`
+
+You should return the following tree:
+```
+    a
+   / \
+  b   c
+ / \ / \
+d  e f  g
+```
+
+[Reconstruct Tree from Preorder and Inorder](dcp_048.py)
+
+----
+
+49. ### Amazon
+
+Given an array of numbers, find the maximum sum of any contiguous subarray of the array.
+
+For example, given the array `[34, -50, 42, 14, -5, 86]`, the maximum sum would be `137`, since we would take elements `42, 14, -5, and 86`.
+
+Given the array `[-5, -1, -8, -9]`, the maximum sum would be `0`, since we would not take any elements.
+
+Do this in `O(N)` time.
+
+[Max Subarray](dcp_049.py)
+
+----
+
+50. ### Microsoft
+
+Suppose an arithmetic expression is given as a binary tree. Each leaf is an integer and each internal node is one of `‘+’, ‘−’, ‘∗’, or ‘/’`.
+
+Given the root to such a tree, write a function to evaluate it.
+```
+    *
+   / \
+  +    +
+ / \  / \
+3  2  4  5
+```
+
+You should return `45`, as it is `(3 + 2) * (4 + 5)`.
+
+[Evaluate Expression](dcp_050.py)
+
+----
+
+51. ### Facebook
+
+Given a function that generates perfectly random numbers between 1 and k (inclusive), where k is an input, write a function that shuffles a deck of cards represented as an array using only swaps.
+
+It should run in O(N) time.
+
+Hint: Make sure each one of the 52! permutations of the deck is equally likely.
+
+[Fisher-Yates Algorithm](dcp_051.py)
+
+----
+
+52. ### Google
+
+Implement an `LRU (Least Recently Used)` cache. It should be able to be initialized with a cache size n, and contain the following methods:
+
+`set(key, value)`: sets key to value. If there are already n items in the cache and we are adding a new item, then it should also remove the least recently used item.
+
+`get(key)`: gets the value at key. If no such key exists, return null.
+
+Each operation should run in `O(1)` time.
+
+[LRU Cache](dcp_052.py)
+
+----
+
+53. ### Apple
+
+Implement a queue using two stacks. Recall that a queue is a `FIFO` (first-in, first-out) data structure with the following methods: enqueue, which inserts an element into the queue, and dequeue, which removes it.
+
+[Queue using Stacks](dcp_053.py)
+
+----
+
+54. ### Dropbox
+
+Sudoku is a puzzle where you’re given a partially-filled 9 by 9 grid with digits.
+
+The objective is to fill the grid with the constraint that every row, column, and box (3 by 3 subgrid) must contain all of the digits from 1 to 9.
+
+Implement an efficient sudoku solver.
+
+[Sudoku](dcp_054_a.py)
+
+[Sudoku with caching](dcp_054_b.py)
+
+----
+
+55. ### Microsoft
+
+Implement a URL shortener with the following methods:
+
+- `shorten(url)`, which shortens the url into a six-character alphanumeric string, such as zLg6wl.
+
+- `restore(short)`, which expands the shortened string into the original url. If no such shortened string exists, return null.
+
+Hint: What if we enter the same URL twice?
+
+[URL Shortner](dcp_055.py)
+
+----
+
+56. ### Google
+
+Given an undirected graph represented as an adjacency matrix and an integer k, determine whether each node in the graph can be colored such that no two adjacent nodes share the same color using at most k colors.
+
+[Graph Coloring](dcp_056.py)
+
+----
+
+57. ### Amazon
+
+Same as 1
+
+----
+
+58. ### Amazon
+
+An sorted array of integers was rotated an unknown number of times.
+
+Given such an array, find the index of the element in the array in faster than linear time. If the element doesn’t exist in the array, return null.
+
+For example, given the array `[13, 18, 25, 2, 8, 10]` and the element 8, return 4 (the index of 8 in the array).
+
+You can assume all the integers in the array are unique.
+
+[Search in rotated array](dcp_058.py)
+
+----
+
+59. ### Google
+
+Implement a file syncing algorithm for two computers over a low-bandwidth network.
+
+What if we know the files in the two computers are mostly the same?
+
+[Merkel Tree](dcp_059.py)
+
+----
+
+60. ### Facebook
+
+Given a multiset of integers, return whether it can be partitioned into two subsets whose sums are the same.
+
+For example, given the multiset {15, 5, 20, 10, 35, 15, 10}, it would return true, since we can split it up into {15, 5, 10, 15, 10} and {20, 35}, which both add up to 55.
+
+Given the multiset {15, 5, 20, 10, 35}, it would return false, since we can’t split it up into two subsets that add up to the same sum.
+
+[Equal Partition](dcp_060.py)
+
+----
+
 61. ### Google
 
 Implement integer exponentiation. That is, implement the `pow(x, y)` function, where `x` and `y` are integers and returns `x^y`.
@@ -520,6 +787,70 @@ Do this faster than the naive method of repeated multiplication.
 For example, `pow(2, 10)` should return `1024`.
 
 [Power](dcp_061.py)
+
+----
+
+62. ### Facebook
+
+There is an N by M matrix of zeroes. Given N and M, write a function to count the number of ways of starting at the top-left corner and getting to the bottom-right corner. You can only move right or down.
+
+For example, given a 2 by 2 matrix, you should return 2, since there are two ways to get to the bottom-right:
+
+- Right, then down
+
+- Down, then right
+
+Given a 5 by 5 matrix, there are 70 ways to get to the bottom-right.
+
+[Number of Paths](dcp_062.py)
+
+----
+
+63. ### Microsoft
+
+Given a 2D matrix of characters and a target word, write a function that returns whether the word can be found in the matrix by going left-to-right, or up-to-down.
+
+For example, given the following matrix:
+```
+[['F', 'A', 'C', 'I'],
+ ['O', 'B', 'Q', 'P'],
+ ['A', 'N', 'O', 'B'],
+ ['M', 'A', 'S', 'S']]
+```
+and the target word `‘FOAM’`, you should return `true`, since it’s the leftmost column.
+
+Similarly, given the target word `‘MASS’`, you should return true, since it’s the last row.
+
+[Word search](dcp_063.py)
+
+----
+
+64. ### Google
+
+A knight’s tour is a sequence of moves by a knight on a chessboard such that all squares are visited once.
+
+Given N, write a function to return the number of knight’s tours on an N by N chessboard.
+
+[Knight Tour](dcp_064.py)
+
+----
+
+65. ### Amazon
+
+Given a N by M matrix of numbers, print out the matrix in a clockwise spiral.
+
+For example, given the following matrix:
+```
+[[1,  2,  3,  4,  5],
+ [6,  7,  8,  9,  10],
+ [11, 12, 13, 14, 15],
+ [16, 17, 18, 19, 20]]
+```
+You should print out the following:
+
+`1, 2, 3, 4, 5, 10, 15, 20, 19, 18, 17, 16, 11, 6, 7, 8, 9, 14, 13, 12`
+
+[Spiral Matrix](dcp_065.py)
 
 ----
 
@@ -533,6 +864,44 @@ Write a function to simulate an unbiased coin toss.
 
 ----
 
+67. ### Google
+
+Implement an LFU (Least Frequently Used) cache.
+
+Same as Que 006
+
+[LFU Cache](dcp_067.py)
+
+----
+
+68. ### Google
+
+On our special chessboard, two bishops attack each other if they share the same diagonal. This includes bishops that have another bishop located between them, i.e. bishops can attack through pieces.
+
+You are given N bishops, represented as (row, column) tuples on a M by M chessboard. Write a function to count the number of pairs of bishops that attack each other. The ordering of the pair doesn’t matter: (1, 2) is considered the same as (2, 1).
+
+For example, given M = 5 and the list of bishops:
+```
+(0, 0)
+(1, 2)
+(2, 2)
+(4, 0)
+```
+
+The board would look like this:
+```
+[b 0 0 0 0]
+[0 0 b 0 0]
+[0 0 b 0 0]
+[0 0 0 0 0]
+[b 0 0 0 0]
+```
+You should return 2, since bishops 1 and 3 attack each other, as well as bishops 3 and 4.
+
+[Bishop Attack](dcp_068.py)
+
+----
+
 69. ### Facebook
 
 Given a list of integers, return the largest product that can be made by multiplying any three integers.  
@@ -540,6 +909,17 @@ For example, if the list is `[-10, -10, 5, 2]`, we should return `500`, since th
 You can assume the list has at least three integers.  
 
 [Max Product](dcp_069.py)
+
+----
+
+70. ### Microsoft
+
+A number is considered perfect if its digits sum up to exactly 10.
+Given a positive integer n, return the n-th perfect number.
+
+For example, given 1, you should return 19. Given 2, you should return 28.
+
+[Nth Perfect Number](dcp_070.py)
 
 ----
 
@@ -699,6 +1079,18 @@ Spreadsheets often use this alphabetical encoding for its columns: `"A", "B", "C
 Given a column number, return its alphabetical column id. For example, given `1`, return `A`. Given `27`, return `AA`.
 
 [Column Number](dcp_212.py)
+
+----
+
+213. ### Snapchat
+
+Given a string of digits, generate all possible valid IP address combinations.
+
+IP addresses must follow the format A.B.C.D, where A, B, C, and D are numbers between 0 and 255. Zero-prefixed numbers, such as 01 and 065, are not allowed, except for 0 itself.
+
+For example, given `“2542540123”`, you should return `['254.25.40.123', '254.254.0.123']`.
+
+[Restore IP addresses](dcp_213.py)
 
 ----
 
