@@ -1092,6 +1092,18 @@ d
 
 ----
 
+81. ### Yelp
+
+Given a mapping of digits to letters (as in a phone number), and a digit string, return all possible letters the number could represent.
+
+You can assume each valid number in the mapping is a single digit.
+
+For example if `{'2': ['a', 'b', 'c'], '3': ['d', 'e', 'f'], }` then `"23"` should return `['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']`.
+
+[Letter Combinations](dcp_081.py)
+
+----
+
 82. ### Microsoft
 
 Using a `read7()` method that returns `7` characters from a file, implement `readN(n)` which reads `n` characters.
@@ -1099,6 +1111,264 @@ Using a `read7()` method that returns `7` characters from a file, implement `rea
 For example, given a file with the content “Hello world”, three read7() returns “Hello w”, “orld” and then “”.
 
 [Read File](dcp_082.py)
+
+----
+
+83. ### Google
+
+Invert a binary tree.
+
+For example, given the following tree:
+```
+    a
+   / \
+  b   c
+ / \  /
+d   e f
+```
+
+should become:
+```
+  a
+ / \
+ c  b
+ \  / \
+  f e  d
+```
+
+[Invert Binary Tree](dcp_083.py)
+
+----
+
+84. ### Amazon
+
+Given a matrix of 1s and 0s, return the number of “islands” in the matrix.
+
+A 1 represents land and 0 represents water, so an island is a group of 1s that are neighboring and their perimeter is surrounded by water.
+
+For example, this matrix has `4` islands.
+```
+1 0 0 0 0
+0 0 1 1 0
+0 1 1 0 0
+0 0 0 0 0
+1 1 0 0 1
+1 1 0 0 1
+```
+
+[Number of Islands](dcp_084.py)
+
+----
+
+### 85. Facebook
+
+Given three 32-bit integers x, y, and b, return x if b is 1 and y if b is 0, using only mathematical or bit operations. 
+
+You can assume b can only be 1 or 0.
+
+[A or B](dcp_085)
+
+----
+
+86. ### Google
+
+Given a string of parentheses, write a function to compute the minimum number of parentheses to be removed to make the string valid (i.e. each open parenthesis is eventually closed).
+
+For example, given the string `()())()`, you should return `1`. 
+
+Given the string `)(`, you should return `2`, since we must remove all of them.
+
+[Minimum Remove to Make Valid Parentheses](dcp_086.py)
+
+----
+
+88. ### ContextLogic
+
+Implement division of two positive integers without using the division, multiplication, or modulus operators.
+
+Return the quotient as an integer, ignoring the remainder.
+
+[Division](dcp_088.py)
+
+----
+
+89. ### LinkedIn.
+
+Determine whether a tree is a valid binary search tree.
+
+A binary search tree is a tree with two children, left and right, and satisfies the constraint that the key in the left child must be less than or equal to the root and the key in the right child must be greater than or equal to the root.
+
+[Valid Binary Search Tree](dcp_089.py)
+
+----
+
+90. ### Google
+
+Given an `integer n` and a `list of integers l`, write a function that randomly generates a number from 0 to n-1 that isn't in l (uniform).
+
+[Random Number](dcp_090.py)
+
+----
+
+91. ### Dropbox
+
+What does the below code snippet print out? How can we fix the anonymous functions to behave as we'd expect?
+
+```
+functions = []
+for i in range(10):
+    functions.append(lambda : i)
+
+for f in functions:
+    print(f())
+```
+
+[Code Fix](dcp_091.py)
+
+----
+
+92. ### Airbnb
+
+We’re given a hashmap with a key `courseId` and value a list of courseIds, which represents that the prerequsite of courseId is courseIds.
+
+Return a sorted ordering of courses such that we can finish all courses.
+
+Return null if there is no such ordering.
+
+For example, given `{'CSC300': ['CSC100', 'CSC200'], 'CSC200': ['CSC100'], 'CSC100': []}`, should return `['CSC100', 'CSC200', 'CSCS300']`.
+
+[Topological Ordering](dcp_092.py)
+
+----
+
+93. ### Apple
+
+Given a tree, find the largest tree/subtree that is a BST.
+
+Given a tree, return the size of the largest tree/subtree that is a BST.
+
+[Largest subtree BST](dcp_093.py)
+
+----
+
+94. ### Google
+
+Given a binary tree of integers, find the maximum path sum between two nodes.
+
+The path must go through at least one node, and does not need to go through the root.
+
+[Max Path Sum](dcp_094.py)
+
+----
+
+95. ### Palantir
+
+Given a number represented by a list of digits, find the next greater permutation of a number, in terms of lexicographic ordering. If there is not greater permutation possible, return the permutation with the lowest value/ordering.
+
+For example, the list `[1,2,3]` should return `[1,3,2]`. The list `[1,3,2]` should return `[2,1,3]`. The list `[3,2,1]` should return `[1,2,3]`.
+
+Can you perform the operation without allocating extra memory (disregarding the input memory)?
+
+[Next Permutation](dcp_095.py)
+
+----
+
+96. ### Microsoft
+
+Given a number in the form of a list of digits, return all possible permutations.
+
+For example, given `[1,2,3]`, return `[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]`.
+
+[Permutations](dcp_096.py)
+
+----
+
+97. ### Stripe
+
+Write a map implementation with a get function that lets you retrieve the value of a key at a particular time.
+
+It should contain the following methods:
+
+`set(key, value, time)`: sets key to value for t = time.
+`get(key, time)`: gets the key at t = time.
+
+The map should work like this. If we set a key at a particular time, it will maintain that value forever or until it gets set at a later time. In other words, when we get a key at a time, it should return the value that was set for that key set at the most recent time.
+
+Consider the following examples:
+```
+d.set(1, 1, 0)  # set key 1 to value 1 at time 0
+d.set(1, 2, 2)  # set key 1 to value 2 at time 2
+d.get(1, 1)     # get key 1 at time 1 should be 1
+d.get(1, 3)     # get key 1 at time 3 should be 2
+d.set(1, 1, 5)  # set key 1 to value 1 at time 5
+d.get(1, 0)     # get key 1 at time 0 should be 1
+d.get(1, 10)    # get key 1 at time 10 should be 1
+d.set(1, 1, 0)  # set key 1 to value 1 at time 0
+d.set(1, 2, 0)  # set key 1 to value 2 at time 0
+d.get(1, 0)     # get key 1 at time 0 should be 2
+```
+
+[Time Map](dcp_097.py)
+
+----
+
+98. ### Coursera
+
+Given a 2D board of characters and a word, find if the word exists in the grid.
+
+The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those `horizontally` or `vertically` neighboring. The same letter cell may not be used more than once.
+
+For example, given the following board:
+```
+[
+  ['A','B','C','E'],
+  ['S','F','C','S'],
+  ['A','D','E','E']
+]
+```
+exists(board, "ABCCED") returns true, exists(board, "SEE") returns true, exists(board, "ABCB") returns false.
+
+[Word Search](dcp_098.py)
+
+----
+
+99. ### Microsoft
+
+Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+
+For example, given `[100, 4, 200, 1, 3, 2]`, the longest consecutive element sequence is `[1, 2, 3, 4]`. Return its length: `4`.
+
+Your algorithm should run in **O(n)** complexity.
+
+[Longest Consecutive Elements](dcp_099.py)
+
+----
+
+100. ### Google
+
+You are in an infinite 2D grid where you can move in any of the 8 directions:
+```
+ (x,y) to
+    (x+1, y),
+    (x - 1, y),
+    (x, y+1),
+    (x, y-1),
+    (x-1, y-1),
+    (x+1,y+1),
+    (x-1,y+1),
+    (x+1,y-1)
+```
+
+You are given a sequence of points and the order in which you need to cover the points. Give the minimum number of steps in which you can achieve it. You start from the first point.
+
+Example:
+
+Input: `[(0, 0), (1, 1), (1, 2)]`
+Output: `2`
+
+It takes 1 step to move from (0, 0) to (1, 1). It takes one more step to move from (1, 1) to (1, 2).
+
+[Minimum steps to coordinates](dcp_100.py)
 
 ----
 
