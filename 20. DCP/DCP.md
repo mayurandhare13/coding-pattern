@@ -1595,6 +1595,150 @@ For example, given `‘waterrfetawx’` and a k of 2, you could delete f and x t
 
 ----
 
+122. ### Zillow
+
+You are given a 2-d matrix where each cell represents number of coins in that cell. Assuming we start at matrix[0][0], and can only move right or down, find the maximum number of coins you can collect by the bottom right corner.
+
+For example, in this matrix
+```
+0 3 1 1
+2 0 0 4
+1 5 3 1
+```
+
+The most we can collect is `0 + 2 + 1 + 5 + 3 + 1 = 12` coins.
+
+[BFS on matrix](dcp_122.py)
+
+----
+
+123. ### LinkedIn
+
+Given a string, return whether it represents a number. Here are the different kinds of numbers:
+
+- `10`, a positive integer
+- `-10`, a negative integer
+- `10.1`, a positive real number
+- `-10.1`, a negative real number
+- `1e5`, a number in scientific notation
+
+And here are examples of non-numbers:
+```
+“a”
+“x 1”
+“a -2”
+”-“
+```
+
+[Is a Number](dcp_123.py)
+
+----
+
+124. ### Microsoft
+
+You have 100 fair coins and you flip them all at the same time. Any that come up tails you set aside. The ones that come up heads you flip again. How many rounds do you expect to play before only one coin remains?
+
+Write a function that, given `n`, returns the number of rounds you’d expect to play until one coin remains.
+
+[Log](dcp_124.py)
+
+----
+
+125. ### Google
+
+Given the root of a binary search tree, and a target K, return two nodes in the tree whose sum equals K.
+
+For example, given the following tree and K of 20
+```
+    10
+   /   \
+ 5      15
+       /  \
+     11    15
+```
+Return the nodes 5 and 15.
+
+[Two sum on BST](dcp_125.py)
+
+----
+
+126. ### Facebook
+
+Write a function that rotates a list by k elements.
+
+For example, `[1, 2, 3, 4, 5, 6] `rotated by two becomes `[3, 4, 5, 6, 1, 2]`.
+
+Try solving this without creating a copy of the list. How many swap or move operations do you need?
+
+[Rotate list](dcp_126.py)
+
+----
+
+127. ### Microsoft
+
+Let’s represent an integer in a linked list format by having each node represent a digit in the number. The nodes make up the number in reversed order.
+
+For example, the following linked list:
+`1 -> 2 -> 3 -> 4 -> 5` is the number `54321`.
+
+Given two linked lists in this format, return their sum in the same linked list format.
+For example, given
+`9 -> 9`, `5 -> 2` return `124 (99 + 25)` as: `4 -> 2 -> 1`
+
+[Linked list sum](dcp_127.py)
+
+----
+
+128. 
+
+The `Tower of Hanoi` is a puzzle game with three rods and n disks, each a different size.
+
+All the disks start off on the first rod in a stack. They are ordered by size, with the largest disk on the bottom and the smallest one at the top.
+
+The goal of this puzzle is to move all the disks from the first rod to the last rod while following these rules:
+
+You can only move one disk at a time.
+A move consists of taking the uppermost disk from one of the stacks and placing it on top of another stack.
+You cannot place a larger disk on top of a smaller disk.
+Write a function that prints out all the steps necessary to complete the Tower of Hanoi. You should assume that the rods are numbered, with the first rod being 1, the second (auxiliary) rod being 2, and the last (goal) rod being 3.
+
+For example, with n = 3, we can do this in 7 moves:
+
+```
+Move 1 to 3
+Move 1 to 2
+Move 3 to 2
+Move 1 to 3
+Move 2 to 1
+Move 2 to 3
+Move 1 to 3
+```
+
+[Tower of Hanoi](dcp_128.py)
+
+----
+
+129. 
+
+Given a real number n, find the square root of n.
+For example, given `n = 9`, return `3`.
+
+[Square root](dcp_129.py)
+
+----
+
+130. ### Facebook
+
+Given an array of numbers representing the stock prices of a company in chronological order and an integer k, return the maximum profit you can make from k buys and sells.
+
+You must buy the stock before you can sell it, and you must sell the stock before you can buy it again.
+
+For example, given `k = 2` and the array `[5, 2, 4, 0, 1]`, you should return `3`.
+
+[Buy Sell stock](dcp_130.py)
+
+----
+
 152. ### Triplebyte
 
 You are given `n` numbers as well as `n` probabilities that sum up to `1`. Write a function to generate one of the numbers with its corresponding probability.
