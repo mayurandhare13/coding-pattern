@@ -1739,6 +1739,183 @@ For example, given `k = 2` and the array `[5, 2, 4, 0, 1]`, you should return `3
 
 ----
 
+131. ### Snapchat
+
+Given the head to a singly linked list, where each node also has a “random” pointer that points to anywhere in the linked list, deep clone the list.
+
+[Clone Linked List](dcp_131.py)
+
+----
+
+132. ### Riot Games
+
+Design and implement a `HitCounter class` that keeps track of requests (or hits). It should support the following operations:
+
+`record(timestamp)`: records a hit that happened at timestamp
+`total()`: returns the total number of hits recorded
+`range(lower, upper)`: returns the number of hits that occurred between timestamps lower and upper (inclusive)
+
+Follow-up: What if our system has limited memory?
+
+[HitCounter](dcp_132.py)
+
+----
+
+133. ### Amazon
+Given a node in a binary search tree, return the next bigger element, also known as the inorder successor.
+
+For example, the inorder successor of 22 is 30.
+```
+   10
+  /  \
+ 5    30
+     /  \
+   22    35
+```
+You can assume each node has a parent pointer.
+
+[Inorder successor](dcp_133.py)
+
+----
+
+134. ### Facebook
+
+You have a large array with most of the elements as zero.
+
+Use a more space-efficient data structure, SparseArray, that implements the same interface:
+
+`init(arr, size)`: initialize with the original large array and size.
+
+`set(i, val)`: updates index at i with val.
+
+`get(i)`: gets the value at index i.
+
+[space-efficient data structure](dcp_134.py)
+
+----
+
+135. ### Apple
+
+Given a binary tree, find a minimum path sum from root to a leaf.
+
+For example, the minimum path in this tree is `[10, 5, 1, -1]`, which has `sum 15`.
+```
+  10
+ /  \
+5    5
+ \     \
+   2    1
+       /
+     -1
+```
+
+[Minimum sum path](dcp_135.py)
+
+----
+
+136. ### Google
+
+Given an N by M matrix consisting only of 1’s and 0’s, find the largest rectangle containing only 1’s and return its area.
+
+For example, given the following matrix:
+```
+[[1, 0, 0, 0],
+ [1, 0, 1, 1],
+ [1, 0, 1, 1],
+ [0, 1, 0, 0]]
+```
+
+Return `4`.
+
+[Largest rectangle](dcp_136.py)
+
+----
+
+137. ### Amazon
+
+Implement a bit array.
+
+A bit array is a space efficient array that holds a value of 1 or 0 at each index.
+
+`init(size)`: initialize the array with size
+
+`set(i, val)`: updates index at i with val where val is either 1 or 0.
+
+`get(i)`: gets the value at index i.
+
+[Bit array](dcp_137.py)
+
+----
+
+138. ### Google
+
+Find the minimum number of coins required to make n cents.
+
+You can use standard American denominations, that is, `1¢, 5¢, 10¢, and 25¢`.
+
+For example, given `n = 16`, `return 3` since we can make it with a 10¢, a 5¢, and a 1¢
+
+[Minimum coins](dcp_138.py)
+
+----
+
+139. ### Google
+
+Given an iterator with methods `next()` and `hasNext()`, create a wrapper iterator, PeekableInterface, which also implements **peek()**. peek shows the next element that would be returned on next().
+
+Here is the interface:
+
+```
+class PeekableInterface(object):
+    def __init__(self, iterator):
+        pass
+
+    def peek(self):
+        pass
+
+    def next(self):
+        pass
+
+    def hasNext(self):
+        pass
+```
+
+[PeekableInterface](dcp_139.py)
+
+----
+
+140. ### Facebook
+
+Given an array of integers in which two elements appear exactly once and all other elements appear exactly twice, find the two elements that appear only once.
+
+For example, given the array `[2, 4, 6, 8, 10, 2, 6, 10]`, return `4 and 8`. The order does not matter.
+
+Follow-up: Can you do this in linear time and constant space?
+
+[Two single numbers](dcp_140.py)
+
+----
+
+141. ### Microsoft
+
+Implement 3 stacks using a single list:
+
+```
+class Stack:
+    def __init__(self):
+        self.list = []
+
+    def pop(self, stack_number):
+        pass
+
+    def push(self, item, stack_number):
+        pass
+```
+
+[3 stacks using single list](dcp_141.py)
+
+----
+
 152. ### Triplebyte
 
 You are given `n` numbers as well as `n` probabilities that sum up to `1`. Write a function to generate one of the numbers with its corresponding probability.
