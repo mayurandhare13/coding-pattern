@@ -1916,6 +1916,156 @@ class Stack:
 
 ----
 
+142. ### Google
+
+You're given a string consisting solely of `(`, `)`, and `*`. `*` can represent either a `(`, `)`, or an empty string. Determine whether the parentheses are balanced.
+
+For example, `(()*` and `(*)` are balanced. `)*(` is not balanced.
+
+[Balanced Parenthesis](dcp_142.py)
+
+----
+
+143. ### Amazon
+
+Given a pivot x, and a list lst, partition the list into three parts.
+
+- The first part contains all elements in lst that are less than x
+
+- The second part contains all elements in lst that are equal to x
+
+- The third part contains all elements in lst that are larger than x
+Ordering within a part can be arbitrary.
+
+For example, given `x = 10` and `lst = [9, 12, 3, 5, 14, 10, 10]`, one partition may be `[9, 3, 5, 10, 10, 12, 14]`.
+
+[Partition](dcp_143.py)
+
+----
+
+144. ### Google
+
+Given an array of numbers and an index i, return the index of the nearest larger number of the number at index i, where **distance is measured in array indices**.
+
+For example, given `[4, 1, 3, 5, 6]` and `index 0`, you should return `3`.
+
+If two distances to larger numbers are the equal, then return any one of them. If the array at i doesn't have a nearest larger integer, then return null.
+
+Follow-up: If you can preprocess the array, can you do this in constant time?
+
+[Nearest larger number](dcp_144.py)
+
+----
+
+145. ### Google
+
+Given the head of a singly linked list, swap every two nodes and return its head.
+
+For example, given `1 -> 2 -> 3 -> 4`, return `2 -> 1 -> 4 -> 3`.
+
+[Swap nodes in LinkedList](dcp_145.py)
+
+----
+
+146. ### BufferBox
+
+Given a binary tree where all nodes are either 0 or 1, prune the tree so that subtrees containing all 0s are removed.
+
+For example, given the following tree:
+```
+   0
+  / \
+ 1   0
+    / \
+   1   0
+  / \
+ 0   0
+```
+
+should be pruned to:
+
+```
+   0
+  / \
+ 1   0
+    /
+   1
+```
+
+We do not remove the tree at the root or its left child because it still has a 1 as a descendant.
+
+[Prune tree](dcp_146.py)
+
+----
+
+147. 
+
+Given a list, sort it using this method: reverse(lst, i, j), which reverses lst from i to j.
+
+[Pancake Sort](dcp_147.py)
+
+----
+
+148. ### Apple
+
+Gray code is a binary code where each successive value differ in only one bit, as well as when wrapping around. Gray code is common in hardware so that we don’t see temporary spurious values during transitions.
+
+Given a number of bits n, generate a possible gray code for it.
+
+For example, for `n = 2`, one gray code would be `[00, 01, 11, 10]`.
+
+[Grey code](dcp_148.py)
+
+----
+
+149. ### Goldman Sachs
+
+Given a list of numbers L, implement a method sum(i, j) which returns the sum from the sublist L[i:j] (including i, excluding j).
+
+For example, given `L = [1, 2, 3, 4, 5]`, `sum(1, 3)` should return `sum([2, 3])`, which is `5`.
+
+You can assume that you can do some pre-processing. sum() should be optimized over the pre-processing step.
+
+[Subarray sum](dcp_149.py)
+
+----
+
+150. ### LinkedIn
+
+Given a list of points, a central point, and an integer k, find the nearest k points from the central point.
+
+For example, given the list of points `[(0, 0), (5, 4), (3, 1)]`, the `central point (1, 2)`, and `k = 2`, return `[(0, 0), (3, 1)]`.
+
+[Closest points](dcp_150.py)
+
+----
+
+151. 
+
+Given a 2-D matrix representing an image, a location of a pixel in the screen and a color C, replace the color of the given pixel and all adjacent same colored pixels with C.
+
+For example, given the following matrix, and location pixel of (2, 2), and 'G' for green:
+
+```
+B B W
+W W W
+W W W
+B B B
+```
+
+Becomes
+
+```
+B B G
+G G G
+G G G
+B B B
+```
+
+[Floodfill](dcp_151.py)
+
+----
+
 152. ### Triplebyte
 
 You are given `n` numbers as well as `n` probabilities that sum up to `1`. Write a function to generate one of the numbers with its corresponding probability.
@@ -1925,6 +2075,159 @@ For example, given the numbers `[1, 2, 3, 4]` and probabilities `[0.1, 0.5, 0.2,
 You can generate random numbers between 0 and 1 uniformly.
 
 [Arbitrary Probability](dcp_152.py)
+
+----
+
+153. 
+
+Find an efficient algorithm to find the smallest distance (measured in number of words) between any two given words in a string.
+
+For example, given words `"hello"`, and `"world"` and a text content of `"dog cat hello cat dog dog hello cat world"`, return `1` because there's only one word "cat" in between the two words.
+
+[Min distance between words](dcp_153.py)
+
+----
+
+154. ### Amazon
+
+Implement a `stack API using only a heap`. A stack implements the following methods:
+
+- `push(item)`, which adds an element to the stack
+
+- `pop()`, which removes and returns the most recently added element (or throws an error if there is nothing on the stack)
+
+Recall that a heap has the following operations:
+
+- `push(item)`, which adds a new key to the heap
+
+- `pop()`, which removes and returns the max value of the heap
+
+[Stack using heap](dcp_154.py)
+
+----
+
+155. ### MongoDB
+
+Given a list of elements, find the majority element, which appears more than half the time (> floor(len(lst) / 2.0)).
+
+You can assume that such element exists.
+
+For example, given `[1, 2, 1, 1, 1, 4, 0]`, return `1`.
+
+[Boyer-Moore voting algorithm](dcp_155.py)
+
+----
+
+156. ### Facebook
+
+Given a positive integer n, find the smallest number of squared integers which sum to n.
+
+For example, given `n = 13`, return `2` since `13 = 3^2 + 2^2 = 9 + 4`.
+
+Given `n = 27`, return `3` since `27 = 3^2 + 3^2 + 3^2 = 9 + 9 + 9`.
+
+[Perfect Squares](dcp_156.py)
+
+----
+
+157. ### Amazon
+
+Given a string, determine whether any permutation of it is a palindrome.
+
+For example, `carrace` should return `true`, since it can be rearranged to form `racecar`, which is a palindrome. `daily` should return `false`, since there's no rearrangement that can form a palindrome.
+
+[Permuatation is Palindrome](dcp_157.py)
+
+----
+
+158. ### Slack
+
+You are given an N by M matrix of 0s and 1s. Starting from the top left corner, how many ways are there to reach the bottom right corner?
+
+You can only move right and down. 0 represents an empty space while 1 represents a wall you cannot walk through.
+
+For example, given the following matrix:
+```
+[[0, 0, 1],
+ [0, 0, 1],
+ [1, 0, 0]]
+```
+
+Return two, as there are only two ways to get to the bottom right:
+
+- Right, down, down, right
+
+- Down, right, down, right
+
+The top left corner and bottom right corner will always be 0.
+
+[Number of paths with contraints](dcp_158.py)
+
+----
+
+159. ### Google
+
+Given a string, return the first recurring character in it, or null if there is no recurring character.
+
+For example, given the string `"acbbac"`, return `"b"`. Given the string `"abcdef"`, return `null`.
+
+[First repeating character](dcp_159.py)
+
+----
+
+160. ### Uber
+
+Given a tree where each edge has a weight, compute the `length of the longest path` in the tree.
+
+For example, given the following tree:
+```
+   a
+  /|\
+ b c d
+    / \
+   e   f
+  / \
+ g   h
+```
+
+and the weights: `a-b: 3, a-c: 5, a-d: 8, d-e: 2, d-f: 4, e-g: 1, e-h: 1`, the longest path would be `c -> a -> d -> f`, with a length of `17`.
+
+The path does not have to pass through the root, and each node can have any amount of children.
+
+[Longest path sum](dcp_160.py)
+
+----
+
+161. ### Facebook
+Given a 32-bit integer, return the number with its bits reversed.
+
+For example, given the `binary number 1111 0000 1111 0000 1111 0000 1111 0000`, return `0000 1111 0000 1111 0000 1111 0000 1111`.
+
+[Reverse bits](dcp_161.py)
+
+----
+
+162. ### Square
+
+Given a list of words, return the shortest unique prefix of each word. For example, given the list:
+```
+dog
+cat
+apple
+apricot
+fish
+```
+
+Return the list:
+```
+d
+c
+app
+apr
+f
+```
+
+[Prefix of each word](dcp_162.py)
 
 ----
 
