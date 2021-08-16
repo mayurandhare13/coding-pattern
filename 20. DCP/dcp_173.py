@@ -14,6 +14,7 @@ def flatten(d):
 
     return flat_dict
 
+
 if __name__ == '__main__':
     d = {
         "key": 3,

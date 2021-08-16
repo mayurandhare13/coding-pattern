@@ -2231,6 +2231,164 @@ f
 
 ----
 
+163. ### Jane Street
+
+Given an arithmetic expression in Reverse Polish Notation, write a program to evaluate it.
+
+The expression is given as a list of numbers and operands.
+
+For example: `[5, 3, '+']` should return `5 + 3 = 8`.
+
+For example, `[15, 7, 1, 1, '+', '-', '/', 3, '*', 2, 1, 1, '+', '+', '-']` should return 5, since it is equivalent to `((15 / (7 - (1 + 1))) * 3) - (2 + (1 + 1)) = 5`.
+
+You can assume the given expression is always valid.
+
+[Evaluate Reverse Polish Notation](dcp_163.py)
+
+----
+
+164. ### Google
+
+You are given an array of length `n + 1` whose elements belong to the set `{1, 2, ..., n}`. 
+
+By the pigeonhole principle, there must be a duplicate. Find it in linear time and space.
+
+[Duplicate element](dcp_164.py)
+
+----
+
+165. ### Google
+
+Given an array of integers, return a new array where each element in the new array is the number of smaller elements to the right of that element in the original input array.
+
+For example, given the array `[3, 4, 9, 6, 1]`, return `[1, 1, 2, 1, 0]`, since:
+
+- There is 1 smaller element to the right of 3
+
+- There is 1 smaller element to the right of 4
+
+- There are 2 smaller elements to the right of 9
+
+- There is 1 smaller element to the right of 6
+
+- There are no smaller elements to the right of 1
+
+[Smaller counts](dcp_165.py)
+
+----
+
+166. ### Uber
+
+Implement a `2D iterator class`. It will be initialized with an array of arrays, and should implement the following methods:
+
+`next()`: returns the next element in the array of arrays. If there are no more elements, raise an exception.
+
+`has_next()`: returns whether or not the iterator still has elements left.
+
+For example, given the input `[[1, 2], [3], [], [4, 5, 6]]`, calling next() repeatedly should output `1, 2, 3, 4, 5, 6`.
+
+Do not use flatten or otherwise clone the arrays. Some of the arrays can be empty.
+
+[2D iterator](dcp_166.py)
+
+----
+
+167. ### Airbnb
+
+Given a list of words, find all pairs of unique indices such that the concatenation of the two words is a palindrome.
+
+For example, given the list `["code", "edoc", "da", "d"]`, return `[(0, 1), (1, 0), (2, 3)]`.
+
+[Palindrome Pairs](dcp_167.py)
+
+----
+
+168. ### Facebook
+
+Given an N by N matrix, rotate it by 90 degrees clockwise.
+
+For example, given the following matrix:
+
+```
+[[1, 2, 3],
+ [4, 5, 6],
+ [7, 8, 9]]
+```
+
+you should return:
+
+```
+[[7, 4, 1],
+ [8, 5, 2],
+ [9, 6, 3]]
+```
+
+Follow-up: What if you couldn’t use any extra space?
+
+[Rotate Matrix](dcp_168.py)
+
+----
+
+169. ### Google
+
+Given a linked list, sort it in `O(n log n)` time and constant space.
+
+For example, the linked list `4 -> 1 -> -3 -> 99` should become `-3 -> 1 -> 4 -> 99`.
+
+[Sort Linked List](dcp_169.py)
+
+----
+
+170. ### Facebook
+
+Given a start word, an end word, and a dictionary of valid words, find the shortest transformation sequence from start to end such that only one letter is changed at each step of the sequence, and each transformed word exists in the dictionary. If there is no possible transformation, return null. Each word in the dictionary have the same length as start and end and is lowercase.
+
+For example, given `start = "dog", end = "cat"`, and `dictionary = {"dot", "dop", "dat", "cat"}`, return `["dog", "dot", "dat", "cat"]`.
+
+Given `start = "dog", end = "cat"`, and `dictionary = {"dot", "tod", "dat", "dar"}`, return `null` as there is no possible transformation from dog to cat.
+
+[Word Ladder Length](dcp_170-a.py)
+
+[Word Ladder](dcp_170-b.py)
+
+----
+
+171. ### Amazon
+
+You are given a list of data entries that represent entries and exits of groups of people into a building.
+
+An entry looks like this:
+
+`{"timestamp": 1526579928, "count": 3, "type": "enter"}`
+This means 3 people entered the building.
+
+An exit looks like this:
+
+`{"timestamp": 1526580382, "count": 2, "type": "exit"}`
+This means that 2 people exited the building.
+
+Timestamp is in Unix time.
+
+Find the busiest period in the building, that is, the time with the most people in the building. Return it as a pair of (start, end) timestamps. You can assume the building always starts off and ends up empty, i.e. with 0 people inside.
+
+[Busiest Period in Room](dcp_171.py)
+
+----
+
+172. ### Dropbox
+
+Given a string s and a list of words words, where each word is the same length, find all starting indices of substrings in s that is a concatenation of every word in words exactly once.
+
+For example, given `s = "dogcatcatcodecatdog"` and `words = ["cat", "dog"]`, return `[0, 13]`, since `"dogcat"` starts at index 0 and "catdog" starts at index 13.
+
+Given `s = "barfoobazbitbyte"` and `words = ["dog", "cat"]`, return `[]` since there are no substrings composed of "dog" and "cat" in s.
+
+The order of the indices does not matter.
+
+[Words palindrome in Sentence](dcp_172.py)
+
+----
+
 173. ### Stripe
 
 Write a function to flatten a nested dictionary. Namespace the keys with a period.
