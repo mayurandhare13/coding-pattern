@@ -2416,6 +2416,106 @@ it should become:
 
 ----
 
+175. ### Google
+
+You are given a starting state start, a list of transition probabilities for a Markov chain, and a number of steps num_steps. Run the Markov chain starting from start for num_steps and compute the number of times we visited each state.
+
+For example, given the starting state a, number of steps `5000`, and the following transition probabilities:
+
+```
+[
+  ('a', 'a', 0.9),
+  ('a', 'b', 0.075),
+  ('a', 'c', 0.025),
+  ('b', 'a', 0.15),
+  ('b', 'b', 0.8),
+  ('b', 'c', 0.05),
+  ('c', 'a', 0.25),
+  ('c', 'b', 0.25),
+  ('c', 'c', 0.5)
+]
+```
+
+One instance of running this Markov chain `might produce { 'a': 3012, 'b': 1656, 'c': 332 }`.
+
+[Markov chain](dcp_175.py)
+
+----
+
+176. ### Bloomberg
+
+Determine whether there exists a one-to-one character mapping from one string s1 to another s2.
+
+For example, given `s1 = abc and s2 = bcd`, return `true` since we can map a to b, b to c, and c to d.
+
+Given `s1 = foo and s2 = bar`, return `false` since the o cannot map to two characters.
+
+[Character mapping](dcp_176.py)
+
+----
+
+177. ### Airbnb
+
+Given a linked list and a positive integer k, rotate the list to the right by k places.
+
+For example, given the linked list `7 -> 7 -> 3 -> 5` and `k = 2`, it should become `3 -> 5 -> 7 -> 7`.
+
+Given the linked list `1 -> 2 -> 3 -> 4 -> 5` and `k = 3`, it should become `3 -> 4 -> 5 -> 1 -> 2`.
+
+[Rotate Linked-list](dcp_177.py)
+
+----
+
+178. ### Two Sigma
+
+Alice wants to join her school’s Probability Student Club. Membership dues are computed via one of two simple probabilistic games.
+
+- The first game: roll a die repeatedly. Stop rolling once you get a `five followed by a six`. Your number of rolls is the amount you pay, in dollars.
+
+- The second game: same, except that the stopping condition is a `five followed by a five`.
+
+Which of the two games should Alice elect to play? Does it even matter? Write a program to simulate the two games and calculate their expected value.
+
+[Probability Game](dcp_178.py)
+
+----
+
+179. ### Google
+
+Given the sequence of keys visited by a `postorder traversal` of a binary search tree, reconstruct the tree.
+
+For example, given the sequence `2, 4, 3, 8, 7, 5`, you should construct the following tree:
+
+```
+    5
+   / \
+  3   7
+ / \   \
+2   4   8
+```
+
+[Reconstruct binary tree from Postorder](dcp_179.py)
+
+----
+
+180. ### Google
+
+Given a stack of N elements, interleave the first half of the stack with the second half reversed using only one other queue. This should be done in-place.
+
+Recall that you can only push or pop from a stack, and enqueue or dequeue from a queue.
+
+For example,
+
+stack is `[1, 2, 3, 4, 5]`, it should become `[1, 5, 2, 4, 3]`. 
+
+stack is `[1, 2, 3, 4]`, it should become `[1, 4, 2, 3]`.
+
+Hint: Try working backwards from the end state.
+
+[Interleave Stack](dcp_180.py)
+
+----
+
 195. ### Google
 
 Let `A` be an `N by M` matrix in which every row and every column is sorted.
