@@ -2516,6 +2516,184 @@ Hint: Try working backwards from the end state.
 
 ----
 
+181. ### Google
+
+Given a string, split it into as few strings as possible such that each string is a palindrome.
+
+For example, given the input string `"racecarannakayak"`, return `["racecar", "anna", "kayak"]`.
+
+Given the input string `"abc"`, return `["a", "b", "c"]`.
+
+[Palindrome's in String](dcp_181.py)
+
+----
+
+182. ### Facebook
+
+A graph is minimally-connected if it is connected and there is no edge that can be removed while still leaving the graph connected. For example, any binary tree is minimally-connected.
+
+Given an undirected graph, check if the graph is minimally-connected. You can choose to represent the graph as either an adjacency matrix or adjacency list.
+
+[Critical connections](dcp_182.py)
+
+----
+
+184. ### Amazon
+
+Given n numbers, find the greatest common denominator between them.
+
+For example, given the numbers `[42, 56, 14]`, return `14`.
+
+[GCD](dcp_184.py)
+
+----
+
+185. ### Google
+
+Given two rectangles on a 2D graph, return the area of their intersection. If the rectangles don’t intersect, return 0.
+
+For example, given the following rectangles:
+```
+{
+    "top_left": (1, 4),
+    "dimensions": (3, 3) # width, height
+}
+```
+
+and
+```
+{
+    "top_left": (0, 5),
+    "dimensions": (4, 3) # width, height
+}
+```
+
+return `6`.
+
+[Area of Intersecting rectangles](dcp_185.py)
+
+----
+
+186. ### Microsoft
+
+Given an array of positive integers, divide the array into two subsets such that the difference between the sum of the subsets is as small as possible.
+
+For example, given `[5, 10, 15, 20, 25]`, return the sets `{10, 25}` and `{5, 15, 20}`, which has a difference of `5`, which is the smallest possible difference.
+
+[Smallest difference in subset](dcp_186.py)
+
+----
+
+187. ### Google
+
+You are given given a list of rectangles represented by min and max x- and y-coordinates. Compute whether or not a pair of rectangles overlap each other. If one rectangle completely covers another, it is considered overlapping.
+
+For example, given the following rectangles:
+```
+{
+    "top_left": (1, 4),
+    "dimensions": (3, 3) # width, height
+},
+{
+    "top_left": (-1, 3),
+    "dimensions": (2, 1)
+},
+{
+    "top_left": (0, 5),
+    "dimensions": (4, 3)
+}
+```
+
+return `true` as the first and third rectangle overlap each other.
+
+----
+
+188. ### Google
+
+What will this code print out?
+```
+def make_functions():
+    flist = []
+
+    for i in [1, 2, 3]:
+        def print_i():
+            print(i)
+        flist.append(print_i)
+
+    return flist
+
+functions = make_functions()
+for f in functions:
+    f()
+```
+
+How can we make it print out what we apparently want?
+
+[Code fix](dcp_188.py)
+
+----
+
+189. ### Google
+
+Given an array of elements, return the length of the longest subarray where all its elements are distinct.
+
+For example, given the array `[5, 1, 3, 5, 2, 3, 4, 1]`, return `5` as the longest subarray of distinct elements is `[5, 2, 3, 4, 1]`.
+
+[Longest subarray with distinct elements](dcp_189.py)
+
+----
+
+190. ### Facebook
+
+Given a circular array, compute its maximum subarray sum in O(n) time.
+
+For example, given `[8, -1, 3, 4]`, return `15` as we choose the numbers `3, 4, and 8` where the 8 is obtained from wrapping around.
+
+Given `[-4, 5, 1, 0]`, return `6` as we choose the numbers 5 and 1.
+
+
+[Maximum subarray sum](dcp_190.py)
+
+----
+
+191. ### Stripe
+
+Given a collection of intervals, find the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.
+
+Intervals can “touch”, such as [0, 1] and [1, 2], but they won’t be considered overlapping.
+
+For example, given the intervals `(7, 9), (2, 4), (5, 8)`, return `1` as the last interval can be removed and the first two won’t overlap.
+
+The intervals are not necessarily sorted in any order.
+
+[Non-overlapping intervals](dcp_191.py)
+
+----
+
+192. ### Google
+
+You are given an array of nonnegative integers. Let’s say you start at the beginning of the array and are trying to advance to the end. You can advance at most, the number of steps that you’re currently on. Determine whether you can get to the end of the array.
+
+For example, given the array `[1, 3, 1, 2, 0, 1]`, we can go from indices `0 -> 1 -> 3 -> 5`, so return `true`.
+
+Given the array `[1, 2, 1, 0, 0]`, we can’t reach the end, so return `false`.
+
+[Reach end](dcp_192.py)
+
+----
+
+193. ### Affirm
+
+Given a array of numbers representing the stock prices of a company in chronological order, write a function that calculates the maximum profit you could have made from buying and selling that stock. You’re also given a number fee that represents a transaction fee for each buy and sell transaction.
+
+You must buy before you can sell the stock, but you can make as many transactions as you like.
+
+For example, given `[1, 3, 2, 8, 4, 10]` and `fee = 2`, you should `return 9`, since you could buy the stock at $1, and sell at $8, and then buy it at $4 and sell it at $10. Since we did two transactions, there is a $4 fee, so we have 7 + 6 = 13 profit minus $4 of fees.
+
+[Best Time to Buy and Sell Stock with Transaction Fee](dcp_193.py)
+
+----
+
 195. ### Google
 
 Let `A` be an `N by M` matrix in which every row and every column is sorted.
@@ -2552,11 +2730,59 @@ Return `2` as it occurs twice: once as the left leaf, and once as the sum of 2 +
 
 ----
 
+197. ### Amazon
+
+Given an array and a number k that’s smaller than the length of the array, rotate the array to the right k elements in-place.
+
+[Rotate right array](dcp_197.py)
+
+----
+
+198. ### Google
+
+Given a set of distinct positive integers, find the largest subset such that every pair of elements in the `subset (i, j)` satisfies either `i % j = 0 or j % i = 0`.
+
+For example, given the set `[3, 5, 10, 20, 21]`, you should return `[5, 10, 20]`. Given `[1, 3, 6, 24]`, return `[1, 3, 6, 24]`.
+
+[Largest divisible subset](dcp_198.py)
+
+----
+
+199. ### Facebook
+
+Given a string of parentheses, find the balanced string that can be produced from it using the minimum number of insertions and deletions. If there are multiple solutions, return any of them.
+
+For example, given `(()`, you could return `(())`. Given `))()(`, you could return `()()()()`.
+
+[Make Parentheses balanced](dcp_199.py)
+
+----
+
+200. ### Microsoft
+
+Let X be a set of n intervals on the real line. We say that a set of points P “stabs” X if every interval in X contains at least one point in P. Compute the smallest set of points that stabs X.
+
+For example, given the intervals `[(1, 4), (4, 5), (7, 9), (9, 12)]`, you should return `[4, 9]`.
+
+[Minimum stab points](dcp_200.py)
+
+----
+
 202. ### Palantir
 
 Write a program that checks whether an integer is a palindrome. For example, `121` is a `palindrome`, as well as 888. 678 is not a palindrome. _Do not convert the integer into a string_.
 
 [Number Palindrome](dcp_202.py)
+
+----
+
+203. ### Uber
+
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand. Find the minimum element in `O(log N) time`. You may assume the array does not contain duplicates.
+
+For example, given `[5, 7, 10, 3, 4]`, return `3`.
+
+[Find min element in rotated array](dcp_203.py)
 
 ----
 

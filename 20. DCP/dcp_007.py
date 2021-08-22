@@ -2,14 +2,14 @@ from functools import lru_cache
 
 @lru_cache(maxsize=None)
 def decodeWaysHelper(s: str, index: int) -> int:
-    if index == len(s):
+    if index == len(s) or index == len(s)-1:
         return 1
 
     if s[index] == '0':
         return 0
 
-    if index == len(s)-1:
-        return 1
+    # if index == len(s)-1:
+        # return 1
 
     ans = decodeWaysHelper(s, index+1)
     if int(s[index : index + 2]) <= 26:

@@ -1,7 +1,6 @@
 def numbersBetween(mat, i1, j1, i2, j2):
     num1, num2 = mat[i1][j1], mat[i2][j2]
-    # small, large = (num1, num2) if num1 < num2 else (num2, num1)
-    small, large = num1, num2
+    small, large = (num1, num2) if num1 < num2 else (num2, num1)
 
     count = 0
     for row in mat:
@@ -19,7 +18,7 @@ if __name__ == '__main__':
         [20, 25, 30, 35, 40, 45]
     ]
 
-    print(numbersBetween(mat, 1, 1, 3, 3))
+    assert numbersBetween(mat, 1, 1, 3, 3) == 14
 
     matrix = [
         [1, 2, 3, 4],
@@ -27,4 +26,4 @@ if __name__ == '__main__':
         [10, 11, 12, 13],
         [20, 21, 22, 23]
     ]
-    print(numbersBetween(matrix, 1, 0, 3, 3))
+    assert numbersBetween(matrix, 1, 0, 3, 3) == 4

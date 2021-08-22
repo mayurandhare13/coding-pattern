@@ -1,5 +1,4 @@
 from queue import Queue
-import queue
 
 
 def interleave(stack: list, que: Queue, index = 1):

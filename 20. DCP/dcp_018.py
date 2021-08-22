@@ -13,34 +13,27 @@ def maxSlidingWindowBrute(nums: list, k: int) -> None:
 def maxSlidingWindow(nums: list, k: int) -> None:
     # store nums[index] in in decresing order 
     deq = deque()
+    result = []
 
-    for i in range(k):
-        # remove all previous small element's index
-        while deq and nums[i] > nums[deq[-1]]:
-            deq.pop()
-
-        deq.append(i)
-
-
-    for i in range(k, len(nums)):
-        # front of deque has largest index
-        print(nums[deq[0]], end=' ')
-
-        # remove OOB elements
-        while deq and deq[0] < i-k+1:
-            deq.popleft()
-
-
+    for i, val in enumerate(nums):
         # Remove all elements smaller than
         # the currently being added element
         # (Remove useless elements)
-        while deq and nums[i] > nums[deq[-1]]:
+        while deq and nums[deq[-1]] <= val:
             deq.pop()
 
         deq.append(i)
-    
-    # print max element from last window
-    print(nums[deq[0]])
+
+        # remove OOB elements
+        if i - deq[0] >= k:
+            deq.popleft()
+
+        # skipping elements if less than K window
+        if i + 1 >= k:
+            # front of deque has largest index
+            result.append(nums[deq[0]])
+
+    print(result)
 
 
 if __name__ == '__main__':
