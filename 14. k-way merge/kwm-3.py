@@ -1,7 +1,7 @@
 '''
 Kth Smallest Number in a Sorted Matrix (Hard)
 
-Given an N∗N matrix where each row and column is sorted in ascending order, find the Kth smallest element in the matrix.
+Given an N*N matrix where each row and column is sorted in ascending order, find the Kth smallest element in the matrix.
 
 Input: Matrix=[
     [2, 6, 8], 

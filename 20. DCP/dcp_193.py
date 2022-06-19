@@ -3,8 +3,11 @@ def maxProfit(prices: list, fee: int):
     hold = -prices[0]   # buy
 
     for i in range(1, len(prices)):
-        cash = max(cash, hold + prices[i] - fee) # max(cash, buy new stock instead)
-        hold = max(hold, cash - prices[i])       # max(buy, sell stock instead)
+        # max(cash, sell stock instead)
+        cash = max(cash, hold + prices[i] - fee)
+
+        # max(buy, buy new stock instead)
+        hold = max(hold, cash - prices[i])
 
     return cash
 

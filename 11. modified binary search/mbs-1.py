@@ -1,5 +1,5 @@
 '''
-Given a sorted array of numbers, find if a given number ‘key’ is present in the array. Though we know that the array is sorted, we don’t know if it’s sorted in ascending or descending order. You should assume that the array can have duplicates.
+Given a sorted array of numbers, find if a given number 'key' is present in the array. Though we know that the array is sorted, we don't know if it's sorted in ascending or descending order. You should assume that the array can have duplicates.
 
 Input: [10, 6, 4], key = 4
 Output: 2

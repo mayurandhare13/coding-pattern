@@ -1,6 +1,6 @@
 '''
 Longest Common Substring
-Given two strings ‘s1’ and ‘s2’, find the length of the longest substring which is common in both the strings.
+Given two strings `s1` and `s2`, find the length of the longest substring which is common in both the strings.
 
 Input: s1 = "passport"
        s2 = "ppsspt"

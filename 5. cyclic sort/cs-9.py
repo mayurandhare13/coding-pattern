@@ -1,6 +1,6 @@
 '''
 Find the First K Missing Positive Numbers (hard) #
-Given an unsorted array containing numbers and a number ‘k’, find the first ‘k’ missing positive numbers in the array.
+Given an unsorted array containing numbers and a number 'k', find the first 'k' missing positive numbers in the array.
 
 Input: [3, -1, 4, 5, 5], k=3
 Output: [1, 2, 6]

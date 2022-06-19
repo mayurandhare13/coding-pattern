@@ -22,8 +22,8 @@ def numWays(matrix: list[list]):
 
     for i in range(1, m):
         for j in range(1, n):
-            fromTop = numWaysMatrix[i - 1][j] if matrix[i - 1][j] == EMPTY else 0
-            fromLeft = numWaysMatrix[i][j - 1] if matrix[i][j - 1] == EMPTY else 0
+            fromTop = numWaysMatrix[i - 1][j]
+            fromLeft = numWaysMatrix[i][j - 1]
 
             if matrix[i][j] == EMPTY:
                 numWaysMatrix[i][j] = fromTop + fromLeft

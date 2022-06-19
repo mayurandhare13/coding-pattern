@@ -25,15 +25,15 @@ def mergeLinkedList(lists: list[Node]):
     minHeap = []
 
     for ll in lists:
-        heappush(minHeap, (ll.key, ll))
+        heappush(minHeap, ll)
 
     while minHeap:
-        key, node = heappop(minHeap)
+        node = heappop(minHeap)
         ref.next = node
         ref = ref.next
 
         if node.next is not None:
-            heappush(minHeap, (node.next.key, node.next))
+            heappush(minHeap, node.next)
 
     return head.next
 

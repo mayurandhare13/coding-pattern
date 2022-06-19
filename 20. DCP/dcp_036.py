@@ -43,13 +43,14 @@ def reverseInorder(root: Node, c: list):
 
     if c[0] == 2:
         print (f"second largest: {root.key}")
+        return
     
     reverseInorder(root.left, c)
 
 
 def secondLargest(root: Node):
     c = [0]
-    return reverseInorder(root, c)
+    reverseInorder(root, c)
 
 
 if __name__ == '__main__':

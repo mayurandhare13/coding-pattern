@@ -40,7 +40,7 @@ def stairCase2(n: int, X: dict) -> int:
 
 def stairCaseCombinations(n: int, X: dict) -> list[list]:
     if n < min(X):
-        return []
+        return [[]]
 
     combinations = []
     # we want valid steps for combinations

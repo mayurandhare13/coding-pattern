@@ -1,6 +1,6 @@
 '''
 Cycle in a Circular Array (hard) #
-We are given an array containing positive and negative numbers. Suppose the array contains a number ‘M’ at a particular index. Now, if ‘M’ is positive we will move forward ‘M’ indices and if ‘M’ is negative move backwards ‘M’ indices. 
+We are given an array containing positive and negative numbers. Suppose the array contains a number 'M' at a particular index. Now, if 'M' is positive we will move forward 'M' indices and if 'M' is negative move backwards 'M' indices. 
 NOTE It should follow only one direction. (Forward or Backward)
 
 Input: [1, 2, -1, 2, 2]

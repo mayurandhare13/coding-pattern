@@ -1,7 +1,7 @@
 '''
 Find all Missing Numbers (easy)
 
-We are given an unsorted array containing numbers taken from the range 1 to ‘n’. The array can have duplicates, which means some numbers will be missing. Find all those missing numbers.
+We are given an unsorted array containing numbers taken from the range 1 to 'n'. The array can have duplicates, which means some numbers will be missing. Find all those missing numbers.
 
 Input: [2, 3, 1, 8, 2, 3, 5, 1]
 Output: 4, 6, 7

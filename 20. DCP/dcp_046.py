@@ -49,9 +49,32 @@ def expandAround(s, left, right):
     return right - left - 1
 
 
+
+def longestPalindrome2(s: str):
+    n = len(s)
+    dp = [[False] * n for _ in range(n)]
+    
+    for i in range(n):
+        dp[i][i] = True
+
+    ans = s[-1]
+
+    for start in range(n-1, -1, -1):
+        for end in range(start+1, n):
+            if s[start] == s[end]:
+                if end - start == 1 or dp[start + 1][end - 1]:
+                    dp[start][end] = True
+                    if len(ans) < (end - start + 1):
+                        ans = s[start : end+1]
+    
+    return ans
+
+
 if __name__ == '__main__':
     assert palindromeSubstring('aabcdcb') == 5
     assert longestPalindrome('aabcdcb') == 'bcdcb'
+    assert longestPalindrome2('aabcdcb') == 'bcdcb'
 
     assert palindromeSubstring('banana') == 5
     assert longestPalindrome('banana') == 'anana'
+    assert longestPalindrome2('banana') == 'anana'

@@ -1,7 +1,7 @@
 '''
 K Pairs with Largest Sums (Hard) #
 
-Given two sorted arrays in descending order, find ‘K’ pairs with the largest sum where each pair consists of numbers from both the arrays.
+Given two sorted arrays in descending order, find 'K' pairs with the largest sum where each pair consists of numbers from both the arrays.
 
 Input: L1=[5, 2, 1], L2=[2, -1], K=3
 Output: [5, 2], [5, -1], [2, 2]

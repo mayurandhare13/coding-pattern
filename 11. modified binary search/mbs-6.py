@@ -1,5 +1,5 @@
 '''
-Given an array of numbers sorted in ascending order, find the element in the array that has the minimum difference with the given ‘key’.
+Given an array of numbers sorted in ascending order, find the element in the array that has the minimum difference with the given 'key'.
 
 Input: [4, 6, 10], key = 7
 Output: 6

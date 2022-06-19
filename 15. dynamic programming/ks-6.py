@@ -1,6 +1,6 @@
 '''
 Target Sum (hard) #
-You are given a set of positive numbers and a target sum ‘S’. Each number should be assigned either a ‘+’ or ‘-’ sign. We need to find the total ways to assign symbols to make the sum of the numbers equal to the target ‘S’.
+You are given a set of positive numbers and a target sum 'S'. Each number should be assigned either a '+' or '-' sign. We need to find the total ways to assign symbols to make the sum of the numbers equal to the target 'S'.
 
 Input: {1, 1, 2, 3}, S=1
 Output: 3

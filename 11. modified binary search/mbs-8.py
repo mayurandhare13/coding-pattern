@@ -1,7 +1,7 @@
 '''
 Search Bitonic Array (medium)
 
-Given a Bitonic array, find if a given ‘key’ is present in it. 
+Given a Bitonic array, find if a given 'key' is present in it. 
 
 Input: [1, 3, 8, 4, 3], key=4
 Output: 3

@@ -1,7 +1,7 @@
 '''
 Strings Interleaving
 
-Give three strings ‘m’, ‘n’, and ‘p’, write a method to find out if ‘p’ has been formed by interleaving ‘m’ and ‘n’. ‘p’ would be considered interleaving ‘m’ and ‘n’ if it contains ALL THE LETTERS from ‘m’ and ‘n’ and the order of letters is preserved too.
+Give three strings 'm', 'n', and 'p', write a method to find out if 'p' has been formed by interleaving 'm' and 'n'. 'p' would be considered interleaving 'm' and 'n' if it contains ALL THE LETTERS from 'm' and 'n' and the order of letters is preserved too.
 
 Input: m="abd", n="cef", p="abcdef"
 Output: true

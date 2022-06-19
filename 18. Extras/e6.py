@@ -1,6 +1,3 @@
-from typing import List
-
-
 class Tree:
     def __init__(self, val, left=None, right=None):
         self.val = val
@@ -39,6 +36,7 @@ def buildTree(head: ListNode):
     mid = getMiddle(head)
     root = Tree(mid.val)
 
+    # single node | leaf node
     if head == mid:
         return root
 
@@ -67,8 +65,8 @@ def buildTree2(head: ListNode):
         nonlocal head
         if l > r:
             return None
-        
-        mid = (l + r) // 2
+
+        mid = l + (r - l) // 2
         left = helper(l, mid - 1)
         
         root = Tree(head.val)

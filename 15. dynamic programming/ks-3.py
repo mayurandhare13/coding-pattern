@@ -1,7 +1,7 @@
 '''
 Subset Sum (medium)
 
-Given a set of positive numbers, determine if a subset exists whose sum is equal to a given number ‘S’.
+Given a set of positive numbers, determine if a subset exists whose sum is equal to a given number 'S'.
 
 Input: {1, 2, 3, 7}, S=6
 Output: True

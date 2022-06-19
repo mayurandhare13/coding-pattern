@@ -1,5 +1,5 @@
 '''
-You are allowed to replace no more than ‘k’ letters with any letter, find the length of the longest substring having the same letters after replacement.
+You are allowed to replace no more than `k` letters with any letter, find the length of the longest substring having the same letters after replacement.
 
 Input: String="aabccbb", k=2
 Output: 5

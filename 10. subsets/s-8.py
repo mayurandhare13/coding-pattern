@@ -1,6 +1,6 @@
 '''
 Structurally Unique Binary Search Trees (hard) #
-Given a number ‘n’, write a function to return all structurally unique Binary Search Trees (BST) that can store values 1 to ‘n’?
+Given a number 'n', write a function to return all structurally unique Binary Search Trees (BST) that can store values 1 to 'n'?
 '''
 
 

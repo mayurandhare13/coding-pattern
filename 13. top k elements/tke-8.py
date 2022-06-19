@@ -1,7 +1,7 @@
 '''
 'K' Closest Numbers (medium)
 
-Given a sorted number array and two integers ‘K’ and ‘X’, find ‘K’ closest numbers to ‘X’ in the array. Return the numbers in the sorted order. ‘X’ is not necessarily present in the array.
+Given a sorted number array and two integers 'K' and 'X', find 'K' closest numbers to 'X' in the array. Return the numbers in the sorted order. 'X' is not necessarily present in the array.
 
 Input: [5, 6, 7, 8, 9], K = 3, X = 7
 Output: [6, 7, 8]

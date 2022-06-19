@@ -1,7 +1,7 @@
 '''
 Search in Rotated Array (medium) #
 
-Given an array of numbers which is sorted in ascending order and also rotated by some arbitrary number, find if a given ‘key’ is present in it.
+Given an array of numbers which is sorted in ascending order and also rotated by some arbitrary number, find if a given 'key' is present in it.
 
 Input: [10, 15, 1, 3, 8], key = 15
 Output: 1

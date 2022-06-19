@@ -1,13 +1,13 @@
 '''
 Connect Ropes (easy)
 
-Given ‘N’ ropes with different lengths, we need to connect these ropes into one big rope with minimum cost. The cost of connecting two ropes is equal to the sum of their lengths.
+Given 'N' ropes with different lengths, we need to connect these ropes into one big rope with minimum cost. The cost of connecting two ropes is equal to the sum of their lengths.
 
 Input: [1, 3, 11, 5]
 Output: 33
 Explanation: First connect 1+3(=4), then 4+5(=9), and then 9+11(=20). So the total cost is 33 (4+9+20)
 
-Given ‘N’ ropes, we need O(N∗logN) to insert all the ropes in the heap.
+Given 'N' ropes, we need O(N*logN) to insert all the ropes in the heap.
 '''
 
 from heapq import *

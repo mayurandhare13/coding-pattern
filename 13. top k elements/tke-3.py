@@ -1,5 +1,5 @@
 '''
-Given an array of points in the a 2D plane, find ‘K’ closest points to the origin.
+Given an array of points in the a 2D plane, find 'K' closest points to the origin.
 
 Input: points = [[1,2],[1,3]], K = 1
 Output: [[1,2]]

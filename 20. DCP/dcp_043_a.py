@@ -36,7 +36,7 @@ class Stack:
         """
         :rtype: int
         """
-        maxElement = max(self.stack)
+        maxElement = self.max()
         maxIndex = 0
         for i in range(len(self.stack) - 1, -1, -1):
             if maxElement == self.stack[i]:

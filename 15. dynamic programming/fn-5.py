@@ -1,6 +1,6 @@
 '''
 Minimum jumps with fee
-Given a staircase with ‘n’ steps and an array of ‘n’ numbers representing the fee that you have to pay if you take the step.
+Given a staircase with 'n' steps and an array of 'n' numbers representing the fee that you have to pay if you take the step.
 calculate the minimum fee required to reach the top of the staircase (beyond the top-most step)
 At every step, you have an option to take either 1 step, 2 steps, or 3 steps. 
 You should assume that you are standing at the first step.

@@ -35,7 +35,7 @@ def inversionMergeSort(nums: list):
     a, ai = inversionMergeSort(nums[:mid])
     b, bi = inversionMergeSort(nums[mid:])
 
-    c= []
+    c = []
     i, j = 0, 0
     inversions = ai + bi
 

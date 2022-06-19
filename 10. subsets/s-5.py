@@ -1,7 +1,7 @@
 '''
 Balanced Parentheses (hard)
 
-For a given number ‘N’, write a function to generate all combination of ‘N’ pairs of balanced parentheses.
+For a given number 'N', write a function to generate all combination of 'N' pairs of balanced parentheses.
 
 Input: N=2
 Output: (()), ()()

@@ -2,7 +2,7 @@
 Permutations (medium)
 
 Given a set of distinct numbers, find all of its permutations.
-If a set has ‘n’ distinct elements it will have n! permutations.
+If a set has 'n' distinct elements it will have n! permutations.
 '''
 
 from collections import deque

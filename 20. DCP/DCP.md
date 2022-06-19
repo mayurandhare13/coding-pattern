@@ -562,7 +562,9 @@ Implement a stack that has the following methods:
 
 Each method should run in constant time.
 
-[Stack](dcp_043.py)
+[Max Stack 1](dcp_043_a.py)
+
+[Max Stack 2](dcp_043_b.py)
 
 ----
 
@@ -2273,7 +2275,8 @@ For example, given the array `[3, 4, 9, 6, 1]`, return `[1, 1, 2, 1, 0]`, since:
 
 - There are no smaller elements to the right of 1
 
-[Smaller counts](dcp_165.py)
+[Smaller counts](dcp_165_a.py)
+[Smaller counts](dcp_165_b.py)
 
 ----
 

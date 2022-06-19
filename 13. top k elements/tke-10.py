@@ -1,7 +1,7 @@
 '''
 Sum of Elements (medium)
 
-Given an array, find the sum of all numbers between the K1’th and K2’th smallest elements of that array.
+Given an array, find the sum of all numbers between the K1'th and K2'th smallest elements of that array.
 
 Input: [1, 3, 12, 5, 15, 11], and K1=3, K2=6
 Output: 23

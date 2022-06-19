@@ -12,18 +12,18 @@ def permutation(nums: list):
 
 
 def permute(nums):
-    def helper(nums, index, output):
+    def helper(nums, index):
         if index == len(nums):
             output.append(nums.copy())
 
         for i in range(index, len(nums)):
             nums[index], nums[i] = nums[i], nums[index]
-            helper(nums, index + 1, output)
+            helper(nums, index + 1)
             nums[i], nums[index] = nums[index], nums[i]
 
 
     output = []
-    helper(nums, 0, output)
+    helper(nums, 0)
     return output
 
 

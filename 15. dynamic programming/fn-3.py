@@ -1,6 +1,6 @@
 '''
 Number factors
-Given a number ‘n’, implement a method to count how many possible ways there are to express ‘n’ as the sum of 1, 3, or 4.
+Given a number 'n', implement a method to count how many possible ways there are to express 'n' as the sum of 1, 3, or 4.
 
 n : 5
 Number of ways = 6

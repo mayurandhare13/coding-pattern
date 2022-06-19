@@ -3,10 +3,10 @@ Given an undirected graph represented as an adjacency matrix and an integer k, d
 '''
 
 '''
-O(k^N) time and O(k) space, where N is the number of vertices, since we’re iterating over k colors and we are backtracking over N vertices.
+O(k^N) time and O(k) space, where N is the number of vertices, since we're iterating over k colors and we are backtracking over N vertices.
 '''
 
-def isValid(graph: list[list], colors: list):
+def isValid(graph: "list[list]", colors: list):
     lastVertex, lastColor = len(colors) - 1, colors[-1]
     
     coloredVertices = [

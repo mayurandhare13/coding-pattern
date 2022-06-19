@@ -1,7 +1,7 @@
 '''
 Unbounded Knapsack
 
-Given two integer arrays to represent weights and profits of ‘N’ items, we need to find a subset of these items which will give us maximum profit such that their cumulative weight is not more than a given number ‘C’. We can assume an infinite supply of item quantities; therefore, each item can be selected multiple times.
+Given two integer arrays to represent weights and profits of 'N' items, we need to find a subset of these items which will give us maximum profit such that their cumulative weight is not more than a given number 'C'. We can assume an infinite supply of item quantities; therefore, each item can be selected multiple times.
 '''
 
 def solve_knapsack_handler(profits, weights, capacity, index):

@@ -18,7 +18,7 @@ def solve_knapsack_handler(profits, weights, capacity, currentIdx, dp):
     return dp[currentIdx][capacity]
 
 def solve_knapsack(profits, weights, capacity):
-    dp = [[-1 for _ in range(capacity + 1)] for i in range(len(profits))]
+    dp = [[-1 for _ in range(capacity + 1)] for i in range(len(weights))]
     return solve_knapsack_handler(profits, weights, capacity, 0, dp)
 
 

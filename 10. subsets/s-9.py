@@ -1,14 +1,14 @@
 '''
 Count of Structurally Unique Binary Search Trees (hard) #
 
-Given a number ‘n’, write a function to return the count of structurally unique Binary Search Trees (BST) that can store values 1 to ‘n’.
+Given a number 'n', write a function to return the count of structurally unique Binary Search Trees (BST) that can store values 1 to 'n'.
 Catalan number problem
 
 Input: 3
 Output: 5
 Explanation: There will be 5 unique BSTs that can store numbers from 1 to 5.
 
-Estimated time complexity will be O(n*2​^n) but the actual time complexity O(4^​n/√​n) is bounded by the Catalan number 
+Estimated time complexity will be O(n*2^n) but the actual time complexity O(4^n/√n) is bounded by the Catalan number 
 '''
 
 

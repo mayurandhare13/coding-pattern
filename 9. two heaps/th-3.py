@@ -9,8 +9,8 @@ Input: Project Capitals=[0,1,2], Project Profits=[1,2,3], Initial Capital=1, Num
 Output: 6
 Explanation:
 
-With initial capital of ‘1’, we will start the second project which will give us profit of ‘2’. Once we selected our first project, our total capital will become 3 (profit + initial capital).
-With ‘3’ capital, we will select the third project, which will give us ‘3’ profit.
+With initial capital of '1', we will start the second project which will give us profit of '2'. Once we selected our first project, our total capital will become 3 (profit + initial capital).
+With '3' capital, we will select the third project, which will give us '3' profit.
 After the completion of the two projects, our total capital will be 6 (1+2+3).
 '''
 

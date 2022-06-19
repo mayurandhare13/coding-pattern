@@ -7,9 +7,10 @@ def subsetSumHelper(nums: list, idx, k):
     if nums[idx] == k:
         return [nums[idx]]
 
-    withInclude = subsetSumHelper(nums, idx + 1, k - nums[idx])
-    if withInclude:
-        return [nums[idx]] + withInclude
+    if k - nums[idx] >= 0:
+        withInclude = subsetSumHelper(nums, idx + 1, k - nums[idx])
+        if withInclude:
+            return [nums[idx]] + withInclude
     
     return subsetSumHelper(nums, idx + 1, k)
 

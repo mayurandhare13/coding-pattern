@@ -1,5 +1,5 @@
 '''
-Given an array of (n−1) integers in the range from 1 to n, find the one number that is missing from the array.
+Given an array of (n-1) integers in the range from 1 to n, find the one number that is missing from the array.
 
 Input: 1, 5, 2, 6, 4
 Answer: 3

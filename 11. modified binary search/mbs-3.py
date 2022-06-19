@@ -1,5 +1,5 @@
 '''
-Given an array of lowercase letters sorted in ascending order, find the smallest letter in the given array "greater" than a given ‘key’.
+Given an array of lowercase letters sorted in ascending order, find the smallest letter in the given array "greater" than a given 'key'.
 
 Input: ['a', 'c', 'f', 'h'], key = 'f'
 Output: 'h'

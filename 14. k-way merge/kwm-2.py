@@ -1,7 +1,7 @@
 '''
 Kth Smallest Number in M Sorted Lists
 
-Given ‘M’ sorted arrays, find the K’th smallest number among all the arrays.
+Given 'M' sorted arrays, find the K'th smallest number among all the arrays.
 Input: L1=[2, 6, 8], L2=[3, 6, 7], L3=[1, 3, 4], K=5
 Output: 4
 Explanation: The 5th smallest number among all the arrays is 4, this can be verified from the merged 

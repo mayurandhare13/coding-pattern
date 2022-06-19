@@ -11,7 +11,7 @@ Explanation: The two substring containing both the words are "catfox" & "foxcat"
 4. If a word is not found or has a higher frequency than required, we can move on to the next character in the string.
 5. Store the index if we have found all the words.
 
-time complexity O(N∗M∗Len) where ‘N’ is the number of characters in the given string, ‘M’ is the total number of words, and ‘Len’ is the length of a word.
+time complexity O(N*M*Len) where `N` is the number of characters in the given string, `M` is the total number of words, and `Len` is the length of a word.
 '''
 
 def find_word_concatenation(str, words):

@@ -32,7 +32,7 @@ def isMatchDp(text: str, pattern: str) -> bool:
             dp[0][i] = dp[0][i-2]
     
     for i in range(1, tLen + 1):
-        for j in range(pLen + 1):
+        for j in range(1, pLen + 1):
             if text[i-1] == pattern[j-1] or pattern[j-1] == '.':
                 dp[i][j] = dp[i-1][j-1]
             

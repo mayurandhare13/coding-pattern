@@ -1,6 +1,6 @@
 '''
 Longest Common Substring
-TC without memoization is exponential O(3^​m+n), where ‘m’ and ‘n’ are the lengths of the two input strings. The space complexity is O(m+n), this space will be used to store the recursion stack.
+TC without memoization is exponential O(3^m+n), where 'm' and 'n' are the lengths of the two input strings. The space complexity is O(m+n), this space will be used to store the recursion stack.
 '''
 
 def find_LCS_length_helper(dp, s1, s2, i1, i2, count):

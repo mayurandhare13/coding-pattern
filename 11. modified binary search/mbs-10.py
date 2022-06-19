@@ -1,5 +1,5 @@
 '''
-Given an array of numbers which is sorted in ascending order and is rotated ‘k’ times around a pivot, find ‘k’.
+Given an array of numbers which is sorted in ascending order and is rotated 'k' times around a pivot, find 'k'.
 
 Input: [10, 15, 1, 3, 8]
 Output: 2

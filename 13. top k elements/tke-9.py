@@ -1,7 +1,7 @@
 '''
 Maximum Distinct Elements (medium)
 
-Given an array of numbers and a number ‘K’, we need to remove ‘K’ numbers from the array such that we are left with maximum distinct numbers.
+Given an array of numbers and a number 'K', we need to remove 'K' numbers from the array such that we are left with maximum distinct numbers.
 
 Input: [7, 3, 5, 8, 5, 3, 3], and K=2
 Output: 3

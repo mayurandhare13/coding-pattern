@@ -1,6 +1,6 @@
 '''
 Comparing Strings containing Backspaces (medium)
-Given two strings containing backspaces (identified by the character ‘#’), check if the two strings are equal. O(M+N)
+Given two strings containing backspaces (identified by the character '#'), check if the two strings are equal. O(M+N)
 
 Input: str1="xy#z", str2="xzz#"
 Output: true

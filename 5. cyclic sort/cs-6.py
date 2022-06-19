@@ -1,7 +1,7 @@
 '''
 Find all Duplicate Numbers (easy)
 
-We are given an unsorted array containing ‘n’ numbers taken from the range 1 to ‘n’. The array has some duplicates, find all the duplicate numbers without using any extra space.
+We are given an unsorted array containing 'n' numbers taken from the range 1 to 'n'. The array has some duplicates, find all the duplicate numbers without using any extra space.
 
 Input: [3, 4, 4, 5, 5]
 Output: [4, 5]

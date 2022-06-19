@@ -5,4 +5,4 @@ def coins(n):
 
 
 if __name__ == '__main__':
-    print(coins(100))
+    print(coins(2000))

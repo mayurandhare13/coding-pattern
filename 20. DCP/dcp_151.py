@@ -30,7 +30,6 @@ def floodfillDFS(matrix: list[list], coord, color, visited=None):
 
 
 def floodfillBFS(matrix: list[list], coord, color):
-    visited = set()
     queue = deque()
     R, C = coord
     prevColor = matrix[R][C]
@@ -39,13 +38,11 @@ def floodfillBFS(matrix: list[list], coord, color):
     while queue:
         R, C = queue.popleft()
         matrix[R][C] = color
-        visited.add((R, C))
 
         for dir in directions:
             r, c = R + dir[0], C + dir[1]
 
-            if _bounds(matrix, r, c) and matrix[r][c] == prevColor and \
-                (r, c) not in visited:
+            if _bounds(matrix, r, c) and matrix[r][c] == prevColor:
                 queue.append((r, c))
 
 

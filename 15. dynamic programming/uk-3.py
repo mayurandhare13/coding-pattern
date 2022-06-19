@@ -1,6 +1,6 @@
 '''
 Coin Change
-Given an infinite supply of ‘n’ coin denominations and a total money amount, we are asked to find the total number of distinct ways to make up that amount.
+Given an infinite supply of 'n' coin denominations and a total money amount, we are asked to find the total number of distinct ways to make up that amount.
 
 Denominations: {1,2,3}
 Total amount: 5

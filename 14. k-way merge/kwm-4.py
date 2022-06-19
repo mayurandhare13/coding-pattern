@@ -1,6 +1,6 @@
 '''
 Smallest Number Range (Hard)
-Given ‘M’ sorted arrays, find the smallest range that includes at least one number from each of the ‘M’ lists.
+Given 'M' sorted arrays, find the smallest range that includes at least one number from each of the 'M' lists.
 
 Input: L1=[1, 5, 8], L2=[4, 12], L3=[7, 8, 10]
 Output: [4, 7]

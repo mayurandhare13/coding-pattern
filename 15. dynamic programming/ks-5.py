@@ -1,6 +1,6 @@
 '''
 Count of Subset Sum (hard) #
-Given a set of positive numbers, find the total number of subsets whose sum is equal to a given number ‘S’.
+Given a set of positive numbers, find the total number of subsets whose sum is equal to a given number 'S'.
 
 Input: {1, 1, 2, 3}, S=4
 Output: 3

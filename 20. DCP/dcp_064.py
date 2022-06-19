@@ -70,6 +70,7 @@ def knightTour(n) -> int:
 
 
 if __name__ == '__main__':
+    print(knightTour(8))
     assert knightTour(1) == 1
     assert knightTour(2) == 0
     assert knightTour(3) == 0
