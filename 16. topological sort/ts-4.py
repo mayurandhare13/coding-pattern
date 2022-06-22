@@ -74,5 +74,5 @@ if __name__ == "__main__":
 
 
 '''
-there can be N! combinations for ‘N’ numbers, therefore the time and space complexity of our algorithm will be O(V!∗E) where ‘V’ is the total number of tasks and ‘E’ is the total prerequisites. We need the ‘E’ part because in each recursive call, at max, we remove (and add back) all the edges.
+there can be N! combinations for 'N' numbers, therefore the time and space complexity of our algorithm will be O(V!*E) where 'V' is the total number of tasks and 'E' is the total prerequisites. We need the 'E' part because in each recursive call, at max, we remove (and add back) all the edges.
 '''

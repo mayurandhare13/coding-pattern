@@ -54,5 +54,5 @@ if __name__ == "__main__":
 '''
 Similar:
 Q:- Find if a given Directed Graph has a cycle in it or not.
-If we can’t determine the topological ordering of all the vertices of a directed graph, the graph has a cycle in it.
+If we can't determine the topological ordering of all the vertices of a directed graph, the graph has a cycle in it.
 '''

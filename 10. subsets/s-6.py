@@ -62,7 +62,7 @@ def solution(s: str):
         helper(s, asf, count + 1, pos + 1)
     
     result = []
-    helper("BAT", "", 0, 0)
+    helper(s, "", 0, 0)
     print(result)
 
 
