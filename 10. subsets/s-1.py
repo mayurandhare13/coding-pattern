@@ -34,5 +34,5 @@ if __name__ == "__main__":
 
 
 '''
-In each step, the number of subsets doubles as we add each element to all the existing subsets, the time complexity of the above algorithm is O(2^​N), where ‘N’ is the total number of elements in the input set. This also means that, in the end, we will have a total of O(2^​N) subsets.
+In each step, the number of subsets doubles as we add each element to all the existing subsets, the time complexity of the above algorithm is O(2^N), where `N` is the total number of elements in the input set. This also means that, in the end, we will have a total of O(2^N) subsets.
 '''

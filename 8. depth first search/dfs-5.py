@@ -53,6 +53,6 @@ if __name__ == "__main__":
 
 
 '''
-The time complexity of the above algorithm is O(N^2) in the worst case (skew tree / linked list), where ‘N’ is the total number of nodes in the tree. This is due to the fact that we traverse each node once, but for every node, we iterate the current path.
+The time complexity of the above algorithm is O(N^2) in the worst case (skew tree / linked list), where `N` is the total number of nodes in the tree. This is due to the fact that we traverse each node once, but for every node, we iterate the current path.
 Balanced Tree -> O(NlogN) if the tree is balanced, then the current path will be equal to the height of the tree
 '''

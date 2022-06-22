@@ -43,8 +43,33 @@ def generate_generalized_abbreviation(word):
     return result
 
 
+def solution(s: str):
+    def helper(s: str, asf: str, count: int, pos: int):
+        if (pos == len(s)):
+            if (count == 0):
+                result.append(asf)
+            else:
+                result.append(asf + str(count))
+            return
+
+        # add `count` and reset `counter` | add abbreviated letters and restart abbrev.
+        if (count > 0):
+            helper(s, asf + str(count) + s[pos], 0, pos + 1)
+        else:
+            helper(s, asf + s[pos], 0, pos + 1)
+
+        # increase `counter` | continue abbreviate
+        helper(s, asf, count + 1, pos + 1)
+    
+    result = []
+    helper("BAT", "", 0, 0)
+    print(result)
+
+
 if __name__ == "__main__":
     print("Generalized abbreviation are: " +
           str(generate_generalized_abbreviation("BAT")))
+    solution("BAT")
     print("Generalized abbreviation are: " +
           str(generate_generalized_abbreviation("code")))
+    solution("code")

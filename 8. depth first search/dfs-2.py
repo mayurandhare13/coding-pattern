@@ -49,10 +49,10 @@ if __name__ == "__main__":
 
 
 '''
-As we know that there can’t be more than N/2 leaves in a binary tree, therefore the maximum number of elements in allPaths will be O(N/2)=O(N). 
-Now, each of these paths can have many nodes in them. For a balanced binary tree (like above), each leaf node will be at maximum depth. As we know that the depth (or height) of a balanced binary tree is O(logN) we can say that, at the most, each path can have logN nodes in it. This means that the total size of the allPaths list will be O(N∗logN). If the tree is not balanced, we will still have the same worst-case space complexity.
+As we know that there can't be more than N/2 leaves in a binary tree, therefore the maximum number of elements in allPaths will be O(N/2)=O(N). 
+Now, each of these paths can have many nodes in them. For a balanced binary tree (like above), each leaf node will be at maximum depth. As we know that the depth (or height) of a balanced binary tree is O(logN) we can say that, at the most, each path can have logN nodes in it. This means that the total size of the allPaths list will be O(N*logN). If the tree is not balanced, we will still have the same worst-case space complexity.
 
-So, the overall space complexity of our algorithm is O(N∗logN).
+So, the overall space complexity of our algorithm is O(N*logN).
 
 ----
 
